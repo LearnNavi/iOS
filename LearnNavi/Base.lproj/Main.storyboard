@@ -1,24 +1,404 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8la-H2-2aa">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica</string>
+            <string>Helvetica-Bold</string>
+            <string>Helvetica-BoldOblique</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Kelku View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                <viewController id="BYZ-38-t0r" customClass="KelkuViewController" customModule="LearnNavi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3V6-r7-Bnr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="KKy-9c-OoQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Version *.* (*)" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="roe-DM-ok5">
+                                <rect key="frame" x="0.0" y="685.33333333333348" width="414" height="20.666666666666629"/>
+                                <color key="backgroundColor" red="0.14130434780000001" green="0.14130434780000001" blue="0.14130434780000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.38510544759999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.46000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZBc-7K-jPV">
+                                <rect key="frame" x="99.666666666666686" y="370" width="215" height="98"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7VE-fB-G8N">
+                                        <rect key="frame" x="0.0" y="0.0" width="215" height="98"/>
+                                        <subviews>
+                                            <button opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.76760566234588623" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04g-4F-foH">
+                                                <rect key="frame" x="0.0" y="0.0" width="215" height="45"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                                <state key="normal" image="dictionaryButton.png">
+                                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <state key="highlighted" image="dictionaryButton_highlighted.png">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="hqH-ba-4JE" kind="show" id="Z7T-Ml-1Yh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.76760566234588623" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUV-5G-ZXO">
+                                                <rect key="frame" x="0.0" y="53" width="215" height="45"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                                <state key="normal" image="resourcesButton.png">
+                                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <state key="highlighted" image="resourcesButton_highlighted.png">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="aLy-wL-qzA" kind="presentation" modalTransitionStyle="flipHorizontal" id="KOy-id-KWl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="KKy-9c-OoQ" firstAttribute="top" secondItem="3V6-r7-Bnr" secondAttribute="top" id="4c0-CG-sjT"/>
+                            <constraint firstItem="KKy-9c-OoQ" firstAttribute="trailing" secondItem="3V6-r7-Bnr" secondAttribute="trailing" id="TEW-KN-Ifa"/>
+                            <constraint firstItem="ZBc-7K-jPV" firstAttribute="top" secondItem="5yS-K0-i4j" secondAttribute="top" constant="350" id="UMO-9b-85J"/>
+                            <constraint firstItem="roe-DM-ok5" firstAttribute="leading" secondItem="5yS-K0-i4j" secondAttribute="leading" id="UPF-wD-XKN"/>
+                            <constraint firstItem="KKy-9c-OoQ" firstAttribute="bottom" secondItem="3V6-r7-Bnr" secondAttribute="bottom" id="YQf-Qf-ym6"/>
+                            <constraint firstItem="KKy-9c-OoQ" firstAttribute="leading" secondItem="3V6-r7-Bnr" secondAttribute="leading" id="cWf-W5-7Br"/>
+                            <constraint firstItem="ZBc-7K-jPV" firstAttribute="centerX" secondItem="3V6-r7-Bnr" secondAttribute="centerX" id="eQw-1b-wxM"/>
+                            <constraint firstItem="roe-DM-ok5" firstAttribute="trailing" secondItem="5yS-K0-i4j" secondAttribute="trailing" id="n8A-8J-mPS"/>
+                            <constraint firstItem="5yS-K0-i4j" firstAttribute="bottom" secondItem="roe-DM-ok5" secondAttribute="bottom" constant="30" id="s8o-pS-ahg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5yS-K0-i4j"/>
                     </view>
+                    <navigationItem key="navigationItem" id="NYq-Jc-Zw5"/>
+                    <connections>
+                        <outlet property="betaText" destination="roe-DM-ok5" id="n2p-E9-Ocn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="904.34782608695662" y="475.27173913043481"/>
+        </scene>
+        <!--Dictionary Table View Controller-->
+        <scene sceneID="oiB-IS-T1s">
+            <objects>
+                <tableViewController id="hqH-ba-4JE" customClass="DictionaryTableViewController" customModule="LearnNavi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kcg-Pq-qPv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="UU5-qt-YNx">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UU5-qt-YNx" id="cZ6-tc-lls">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hqH-ba-4JE" id="Npo-Ug-MeP"/>
+                            <outlet property="delegate" destination="hqH-ba-4JE" id="8o2-zf-4Vn"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="BfK-qt-Dby"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="F6t-Y0-eo4">
+                        <barButtonItem key="leftBarButtonItem" title="Kelku" id="1Y0-PH-9ND">
+                            <connections>
+                                <segue destination="V0F-T2-9w1" kind="unwind" unwindAction="returnToKelku:" id="D3X-op-bF5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="524-a6-0Z6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="V0F-T2-9w1" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="904" y="1245"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bH0-Ch-s6E">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="8la-H2-2aa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="B1S-ht-UEX">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="8Xk-ou-y0I">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="976-Gc-Ik5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y8C-fN-e5o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.8" y="476.76161919040482"/>
+        </scene>
+        <!--Resources View Controller-->
+        <scene sceneID="bTB-hq-ELc">
+            <objects>
+                <viewController id="aLy-wL-qzA" customClass="ResourcesViewController" customModule="LearnNavi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CsT-Ig-m2A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" image="Background-Resources" translatesAutoresizingMaskIntoConstraints="NO" id="DNi-dX-hE5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="M8G-0K-nzm">
+                                <rect key="frame" x="99.666666666666686" y="266" width="215" height="204"/>
+                                <subviews>
+                                    <button opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.76760566234588623" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwa-Gi-SPc">
+                                        <rect key="frame" x="0.0" y="0.0" width="215" height="45"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                        <state key="normal" image="aboutButton_highlighted.png">
+                                            <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted" image="aboutButton.png">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="wqR-dC-B53" kind="presentation" modalTransitionStyle="crossDissolve" id="YDJ-aM-VFH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.76760566234588623" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9M-ve-JTy">
+                                        <rect key="frame" x="0.0" y="53" width="215" height="45"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                        <state key="normal" image="learnNaviButton_highlighted.png">
+                                            <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted" image="learnNaviButton.png">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openLearnNaviWebSite:" destination="aLy-wL-qzA" eventType="touchUpInside" id="dWh-YI-rqF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.76760566234588623" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iG-Db-WSq">
+                                        <rect key="frame" x="0.0" y="106" width="215" height="45"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                        <state key="normal" image="disclaimerButton_highlighted.png">
+                                            <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted" image="disclaimerButton.png">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="rxD-4F-hET" kind="presentation" modalTransitionStyle="crossDissolve" id="FUe-Mz-GJs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.76760566234588623" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6Y-Aa-R1e">
+                                        <rect key="frame" x="0.0" y="159" width="215" height="45"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                        <state key="normal" image="returnHomeButton_highlighted.png">
+                                            <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted" image="returnHomeButton.png">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="lDA-7b-h5d" kind="unwind" unwindAction="returnToKelku:" id="St2-Rl-Kxi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DNi-dX-hE5" firstAttribute="trailing" secondItem="KiY-Py-hbQ" secondAttribute="trailing" id="33l-df-vR1"/>
+                            <constraint firstItem="M8G-0K-nzm" firstAttribute="centerY" secondItem="CsT-Ig-m2A" secondAttribute="centerY" id="Jrc-jA-yCd"/>
+                            <constraint firstAttribute="bottom" secondItem="DNi-dX-hE5" secondAttribute="bottom" id="o0w-8p-Yqg"/>
+                            <constraint firstItem="DNi-dX-hE5" firstAttribute="top" secondItem="CsT-Ig-m2A" secondAttribute="top" id="qfA-N3-d2j"/>
+                            <constraint firstItem="DNi-dX-hE5" firstAttribute="leading" secondItem="KiY-Py-hbQ" secondAttribute="leading" id="uNy-CW-l0r"/>
+                            <constraint firstItem="M8G-0K-nzm" firstAttribute="centerX" secondItem="KiY-Py-hbQ" secondAttribute="centerX" id="zqn-fb-dUs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KiY-Py-hbQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="avT-bl-XSg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="lDA-7b-h5d" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1753.6231884057972" y="474.45652173913049"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="uEL-9F-7E4">
+            <objects>
+                <viewController id="wqR-dC-B53" customClass="AboutViewController" customModule="LearnNavi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="038-MR-sRa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" image="Background-Resources" translatesAutoresizingMaskIntoConstraints="NO" id="0ne-11-zmx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAb-sh-KWm">
+                                <rect key="frame" x="40" y="169" width="334" height="397"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Learn Na'vi was created by Zoë Snow (Seze) from the Learn Na'vi online community.  It was created for the online community as a reference and learning tool.  Special thanks goes to all the members from the Learn Na'vi online community that helped with the development process...</string>
+                                <color key="textColor" red="0.25543478260000002" green="0.16831516190000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1H-zG-d3e">
+                                <rect key="frame" x="39" y="169" width="335" height="398"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Learn Na'vi was created by Zoë Snow (Seze) from the Learn Na'vi online community.  It was created for the online community as a reference and learning tool.  Special thanks goes to all the members from the Learn Na'vi online community that helped with the development process...</string>
+                                <color key="textColor" red="1" green="0.53461682349999995" blue="0.01327203937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.76760566234588623" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LeK-mJ-ipz">
+                                <rect key="frame" x="99.666666666666686" y="574" width="215" height="45"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" image="returnHomeButton_highlighted.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted" image="returnHomeButton.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="B1p-c9-fuV" kind="unwind" unwindAction="returnToResources:" id="XZ8-0n-jdg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Version *.* (*)" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Uv-3d-cOT">
+                                <rect key="frame" x="20" y="694" width="374" height="22"/>
+                                <color key="backgroundColor" red="0.14130434780000001" green="0.14130434780000001" blue="0.14130434780000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" red="0.95783027569015533" green="0.15653195823934044" blue="0.77524483566357927" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.46000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dc4-1E-jAQ" firstAttribute="bottom" secondItem="0ne-11-zmx" secondAttribute="bottom" id="0Mb-uL-FSR"/>
+                            <constraint firstItem="dc4-1E-jAQ" firstAttribute="bottom" secondItem="9Uv-3d-cOT" secondAttribute="bottom" constant="20" id="Gwg-3a-Nxd"/>
+                            <constraint firstItem="0ne-11-zmx" firstAttribute="trailing" secondItem="dc4-1E-jAQ" secondAttribute="trailing" id="GyE-DB-RmD"/>
+                            <constraint firstItem="dc4-1E-jAQ" firstAttribute="bottom" secondItem="LeK-mJ-ipz" secondAttribute="bottom" constant="117" id="LQX-3M-cbQ"/>
+                            <constraint firstItem="0ne-11-zmx" firstAttribute="top" secondItem="038-MR-sRa" secondAttribute="top" id="OpR-fq-MV4"/>
+                            <constraint firstItem="LeK-mJ-ipz" firstAttribute="centerX" secondItem="dc4-1E-jAQ" secondAttribute="centerX" id="TCD-DQ-zbh"/>
+                            <constraint firstItem="0ne-11-zmx" firstAttribute="leading" secondItem="dc4-1E-jAQ" secondAttribute="leading" id="XAz-C7-RH8"/>
+                            <constraint firstItem="dc4-1E-jAQ" firstAttribute="trailing" secondItem="9Uv-3d-cOT" secondAttribute="trailing" constant="20" id="hKf-mW-qCJ"/>
+                            <constraint firstItem="9Uv-3d-cOT" firstAttribute="leading" secondItem="dc4-1E-jAQ" secondAttribute="leading" constant="20" id="jgn-s5-jBm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dc4-1E-jAQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="aboutText" destination="h1H-zG-d3e" id="VEV-Nc-YWx"/>
+                        <outlet property="aboutTextShadow" destination="lAb-sh-KWm" id="VB2-X6-ADe"/>
+                        <outlet property="versionLabel" destination="9Uv-3d-cOT" id="j4R-X4-EIG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i8j-eL-G3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="B1p-c9-fuV" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2910.144927536232" y="110.86956521739131"/>
+        </scene>
+        <!--Disclaimer View Controller-->
+        <scene sceneID="JqZ-hw-wvE">
+            <objects>
+                <viewController id="rxD-4F-hET" customClass="DisclaimerViewController" customModule="LearnNavi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qTR-Ln-vkz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" image="Background-Resources" translatesAutoresizingMaskIntoConstraints="NO" id="t0L-h2-paI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Heg-Ml-EIz">
+                                <rect key="frame" x="40" y="169" width="334" height="397"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">The Na'vi language was created by Paul Frommer. Much of the information displayed in this App was written by Prof. Frommer and is presented here for educational purposes only. Learn Na'vi is not affiliated with the official Avatar website, James Cameron, or the Twentieth Century-Fox Film Corporation. All trademarks and servicemarks are the properties of their respective owners.</string>
+                                <color key="textColor" red="0.25543478260000002" green="0.16831516190000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJV-3j-0vO">
+                                <rect key="frame" x="39" y="169" width="335" height="398"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">The Na'vi language was created by Paul Frommer. Much of the information displayed in this App was written by Prof. Frommer and is presented here for educational purposes only. Learn Na'vi is not affiliated with the official Avatar website, James Cameron, or the Twentieth Century-Fox Film Corporation. All trademarks and servicemarks are the properties of their respective owners.</string>
+                                <color key="textColor" red="1" green="0.53461682349999995" blue="0.01327203937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.76760566234588623" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4O-QE-9vz">
+                                <rect key="frame" x="99.666666666666686" y="574" width="215" height="45"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" image="returnHomeButton_highlighted.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted" image="returnHomeButton.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Drm-Bp-oCY" kind="unwind" unwindAction="returnToResources:" id="hJc-sW-c2Y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X4O-QE-9vz" firstAttribute="centerX" secondItem="Y5c-UA-4hf" secondAttribute="centerX" id="7Qa-IB-dln"/>
+                            <constraint firstItem="Y5c-UA-4hf" firstAttribute="bottom" secondItem="X4O-QE-9vz" secondAttribute="bottom" constant="117" id="EG8-81-kO9"/>
+                            <constraint firstItem="t0L-h2-paI" firstAttribute="leading" secondItem="Y5c-UA-4hf" secondAttribute="leading" id="EtI-mn-l7f"/>
+                            <constraint firstItem="Y5c-UA-4hf" firstAttribute="trailing" secondItem="t0L-h2-paI" secondAttribute="trailing" id="LVj-sN-RaS"/>
+                            <constraint firstItem="Y5c-UA-4hf" firstAttribute="bottom" secondItem="t0L-h2-paI" secondAttribute="bottom" id="g35-ZF-DQt"/>
+                            <constraint firstItem="t0L-h2-paI" firstAttribute="top" secondItem="qTR-Ln-vkz" secondAttribute="top" id="uMy-mF-Zl8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y5c-UA-4hf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cIX-Cw-4un" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Drm-Bp-oCY" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2910" y="851"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="414" height="736"/>
+        <image name="Background-Resources" width="414" height="736"/>
+        <image name="aboutButton.png" width="215" height="45"/>
+        <image name="aboutButton_highlighted.png" width="215" height="45"/>
+        <image name="dictionaryButton.png" width="215" height="45"/>
+        <image name="dictionaryButton_highlighted.png" width="215" height="45"/>
+        <image name="disclaimerButton.png" width="215" height="45"/>
+        <image name="disclaimerButton_highlighted.png" width="215" height="45"/>
+        <image name="learnNaviButton.png" width="215" height="45"/>
+        <image name="learnNaviButton_highlighted.png" width="215" height="45"/>
+        <image name="resourcesButton.png" width="215" height="45"/>
+        <image name="resourcesButton_highlighted.png" width="215" height="45"/>
+        <image name="returnHomeButton.png" width="215" height="45"/>
+        <image name="returnHomeButton_highlighted.png" width="215" height="45"/>
+    </resources>
 </document>

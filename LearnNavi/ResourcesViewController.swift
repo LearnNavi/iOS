@@ -16,7 +16,12 @@ class ResourcesViewController: UIViewController {
     }
     
     @IBAction func openLearnNaviWebSite(_ sender: UIButton) {
-        UIApplication.shared.open(URL(string: "https://www.learnnavi.org")!, options: [:], completionHandler: nil)
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(URL(string: "https://www.learnnavi.org")!, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(URL(string: "https://www.learnnavi.org")!)
+            // Fallback on earlier versions
+        }
     }
     
     

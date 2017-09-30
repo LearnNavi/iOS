@@ -11,7 +11,6 @@ import UIKit
 class KelkuViewController: UIViewController {
 
     // MARK: - Properties
-    @IBOutlet var betaText: UILabel!
     
     
     // MARK: - Actions
@@ -22,21 +21,12 @@ class KelkuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        betaText.text = "Version " + bundleVersionNumber() + " (" + bundleBuildNumber() + ")"
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    func bundleVersionNumber() -> String {
-        return Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
-    }
-    
-    func bundleBuildNumber() -> String {
-        return Bundle.main.infoDictionary?["CFBundleVersion"] as! String
     }
 
 }

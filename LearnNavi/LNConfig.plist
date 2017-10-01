@@ -2,6 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>LNButtonHighlightedImage</key>
+	<string>Button_Orange</string>
+	<key>LNButtonBackImage</key>
+	<string>Button_Purple</string>
+	<key>LNButtonImage</key>
+	<string>Button_Gray</string>
+	<key>LNWebsiteURL</key>
+	<string>https://www.learnnavi.org</string>
+	<key>LNDictionaryURL</key>
+	<string>https://eanaeltu.learnnavi.org/dicts/NaviDictionary.pdf</string>
 	<key>LNDatabaseFile</key>
 	<string>database.sqlite</string>
 	<key>LNDatabaseServerURL</key>

@@ -10,12 +10,6 @@ import UIKit
 
 class DictionaryViewController: LNViewController {
 
-    // MARK: - Actions
-    @IBAction func returnToKelku(_ seque: UIStoryboardSegue) {
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-        self.navigationController?.setToolbarHidden(true, animated: false)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,7 +20,6 @@ class DictionaryViewController: LNViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

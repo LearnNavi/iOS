@@ -20,6 +20,10 @@
 		099F720A1F8132160038261B /* LNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F72091F8132160038261B /* LNViewController.swift */; };
 		099F720C1F8136B60038261B /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F720B1F8136B60038261B /* DictionaryViewController.swift */; };
 		099F720E1F8139760038261B /* LNConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 099F720D1F8139760038261B /* LNConfig.plist */; };
+		099F72101F8147750038261B /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F720F1F8147750038261B /* Entry.swift */; };
+		099F723A1F8150390038261B /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099F72391F8150380038261B /* SQLite.framework */; };
+		099F723B1F8150390038261B /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 099F72391F8150380038261B /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		09E6A1EA1F81515300D93133 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E6A1E91F81515300D93133 /* Dictionary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,20 @@
 			remoteInfo = LearnNavi;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		099F72321F814C550038261B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				099F723B1F8150390038261B /* SQLite.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		090C87B21F8049EA00980610 /* LNButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNButton.swift; sourceTree = "<group>"; };
@@ -59,6 +77,11 @@
 		099F72091F8132160038261B /* LNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNViewController.swift; sourceTree = "<group>"; };
 		099F720B1F8136B60038261B /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		099F720D1F8139760038261B /* LNConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LNConfig.plist; sourceTree = "<group>"; };
+		099F720F1F8147750038261B /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		099F722D1F814C380038261B /* project.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; name = project.xcworkspace; path = LearnNavi.xcodeproj/project.xcworkspace; sourceTree = "<group>"; };
+		099F72371F8150300038261B /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
+		099F72391F8150380038261B /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
+		09E6A1E91F81515300D93133 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				099F723A1F8150390038261B /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,10 +113,12 @@
 		098913341F7F3A64006D337D = {
 			isa = PBXGroup;
 			children = (
+				099F72391F8150380038261B /* SQLite.framework */,
 				0989133F1F7F3A64006D337D /* LearnNavi */,
 				098913541F7F3A64006D337D /* LearnNaviTests */,
 				0989135F1F7F3A64006D337D /* LearnNaviUITests */,
 				0989133E1F7F3A64006D337D /* Products */,
+				099F722C1F814C370038261B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +147,8 @@
 				099F72091F8132160038261B /* LNViewController.swift */,
 				098913441F7F3A64006D337D /* Main.storyboard */,
 				099F720D1F8139760038261B /* LNConfig.plist */,
+				099F720F1F8147750038261B /* Entry.swift */,
+				09E6A1E91F81515300D93133 /* Dictionary.swift */,
 			);
 			path = LearnNavi;
 			sourceTree = "<group>";
@@ -143,6 +171,15 @@
 			path = LearnNaviUITests;
 			sourceTree = "<group>";
 		};
+		099F722C1F814C370038261B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				099F72371F8150300038261B /* SQLite.framework */,
+				099F722D1F814C380038261B /* project.xcworkspace */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,6 +191,8 @@
 				0989133A1F7F3A64006D337D /* Frameworks */,
 				0989133B1F7F3A64006D337D /* Resources */,
 				099F72051F8077620038261B /* ShellScript */,
+				099F72361F814F430038261B /* ShellScript */,
+				099F72321F814C550038261B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -288,6 +327,21 @@
 			shellPath = /bin/bash;
 			shellScript = "#!/bin/bash\n\n# This script automatically sets the version and short version string of\n# an Xcode project from the Git repository containing the project.\n#\n# To use this script in Xcode 4, add the contents to a \"Run Script\" build\n# phase for your application target.\n\nset -o errexit\nset -o nounset\n\nINFO_PLIST=\"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Info\"\n\n# Use the latest version tag for CFBundleShortVersionString. I tag releases\n# in Git using the format v0.0.0; this assumes you're doing the same.\n#SHORT_VERSION=$(git --git-dir=\"${PROJECT_DIR}/.git\" --work-tree=\"${PROJECT_DIR}\" describe --dirty | sed -e 's/^v//' -e 's/g//')\n\n# I'd like to use the Git commit hash for CFBundleVersion.\nVERSION=$(git --git-dir=\"${PROJECT_DIR}/.git\" --work-tree=\"${PROJECT_DIR}\" rev-parse --short HEAD)\n\n# But Apple wants this value to be a monotonically increasing integer, so\n# instead use the number of commits on the master branch. If you like to\n# play fast and loose with your Git history, this may cause you problems.\n# Thanks to @amrox for pointing out the issue and fix.\nBUILD_NUM=$(git --git-dir=\"${PROJECT_DIR}/.git\" --work-tree=\"${PROJECT_DIR}\" rev-list master | wc -l)\n\n#defaults write $INFO_PLIST CFBundleShortVersionString $SHORT_VERSION\ndefaults write $INFO_PLIST LNGitHash $VERSION\ndefaults write $INFO_PLIST CFBundleVersion $BUILD_NUM";
 		};
+		099F72361F814F430038261B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SQLite.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SQLite.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -298,7 +352,9 @@
 				099F720C1F8136B60038261B /* DictionaryViewController.swift in Sources */,
 				099F720A1F8132160038261B /* LNViewController.swift in Sources */,
 				092BEC7F1F7F607B005A2918 /* DictionaryTableViewController.swift in Sources */,
+				099F72101F8147750038261B /* Entry.swift in Sources */,
 				090C87B31F8049EA00980610 /* LNButton.swift in Sources */,
+				09E6A1EA1F81515300D93133 /* Dictionary.swift in Sources */,
 				099F72081F8085330038261B /* Config.swift in Sources */,
 				092BEC7C1F7F4D69005A2918 /* AboutViewController.swift in Sources */,
 				098913411F7F3A64006D337D /* AppDelegate.swift in Sources */,
@@ -463,6 +519,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5X7KP44M4V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = LearnNavi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -484,6 +544,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5X7KP44M4V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = LearnNavi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

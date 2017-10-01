@@ -20,19 +20,21 @@ class LNViewController: UIViewController {
     }
     
     @IBAction func openLearnNaviWebSite(_ sender: UIButton) {
+        let url = Config.sharedInstance.websiteURL()
         if #available(iOS 10.0, *) {
-            UIApplication.shared.open(URL(string: "https://www.learnnavi.org")!, options: [:], completionHandler: nil)
+            UIApplication.shared.open(URL(string: url)!, options: [:], completionHandler: nil)
         } else {
-            UIApplication.shared.openURL(URL(string: "https://www.learnnavi.org")!)
+            UIApplication.shared.openURL(URL(string: url)!)
             // Fallback on earlier versions
         }
     }
     
     @IBAction func openDictionaryPDF(_ sender: UIButton) {
+        let url = Config.sharedInstance.dictionaryURL()
         if #available(iOS 10.0, *) {
-            UIApplication.shared.open(URL(string: "https://eanaeltu.learnnavi.org/dicts/NaviDictionary.pdf")!, options: [:], completionHandler: nil)
+            UIApplication.shared.open(URL(string: url)!, options: [:], completionHandler: nil)
         } else {
-            UIApplication.shared.openURL(URL(string: "https://eanaeltu.learnnavi.org/dicts/NaviDictionary.pdf")!)
+            UIApplication.shared.openURL(URL(string: url)!)
             // Fallback on earlier versions
         }
     }
@@ -50,8 +52,9 @@ class LNViewController: UIViewController {
     }
     
     func configureBackButton() {
+        let buttonImage = Config.sharedInstance.buttonBackImage()
         if backButton != nil {
-            backButton!.setBackgroundImage(UIImage.init(named: "Button_Purple"), for: .normal)
+            backButton!.setBackgroundImage(UIImage.init(named: buttonImage), for: .normal)
         }
     }
     

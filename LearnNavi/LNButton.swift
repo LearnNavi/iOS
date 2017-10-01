@@ -15,9 +15,11 @@ class LNButton: UIButton {
         super.init(coder: aDecoder)
         
         // set other operations after super.init, if required
-        self.setBackgroundImage(UIImage.init(named: "Button_Gray"), for: .normal)
-        self.setBackgroundImage(UIImage.init(named: "Button_Orange"), for: .selected)
-        self.setBackgroundImage(UIImage.init(named: "Button_Orange"), for: .highlighted)
+        let buttonImage = Config.sharedInstance.buttonImage()
+        let buttonHighlightedImage = Config.sharedInstance.buttonHighlightedImage()
+        self.setBackgroundImage(UIImage.init(named: buttonImage), for: .normal)
+        self.setBackgroundImage(UIImage.init(named: buttonHighlightedImage), for: .selected)
+        self.setBackgroundImage(UIImage.init(named: buttonHighlightedImage), for: .highlighted)
         self.contentEdgeInsets = UIEdgeInsetsMake(10.0, 0.0, 0.0, 0.0)
         self.titleLabel!.font = UIFont.init(name: "Papyrus", size: 32.0)
         //self.setTitleColor(UIColor.white, for: [])

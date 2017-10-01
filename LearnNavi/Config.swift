@@ -6,7 +6,7 @@
 //  Copyright © 2017 Learn Na'vi. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 final class Config {
     // Singleton instance
@@ -40,6 +40,26 @@ final class Config {
         } else {
             return mainConfig.object(forKey: aKey)
         }
+    }
+    
+    open func buttonBackImage() -> String {
+        return fetchConfigItem(forKey: "LNButtonBackImage") as! String
+    }
+    
+    open func buttonImage() -> String {
+        return fetchConfigItem(forKey: "LNButtonImage") as! String
+    }
+    
+    open func buttonHighlightedImage() -> String {
+        return fetchConfigItem(forKey: "LNButtonHighlightedImage") as! String
+    }
+    
+    open func websiteURL() -> String {
+        return fetchConfigItem(forKey: "LNWebsiteURL") as! String
+    }
+    
+    open func dictionaryURL() -> String {
+        return fetchConfigItem(forKey: "LNDictionaryURL") as! String
     }
     
     open func databaseFile() -> String {

@@ -19,10 +19,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Kelku View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="KelkuViewController" customModule="LearnNavi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LNViewController" customModule="LearnNavi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3V6-r7-Bnr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -36,15 +36,15 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Akq-MD-Rw9" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
                                         <accessibility key="accessibilityConfiguration" label="Dictionary"/>
-                                        <state key="normal" title="Dictionary" backgroundImage="Button_Purple"/>
+                                        <state key="normal" title="Dictionary" backgroundImage="Button_Gray"/>
                                         <connections>
-                                            <segue destination="hqH-ba-4JE" kind="show" id="3cM-Cg-iUx"/>
+                                            <segue destination="X00-GG-CQw" kind="presentation" modalTransitionStyle="flipHorizontal" id="p2W-pn-2re"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbd-Ud-n1E" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="65" width="334" height="49.999999999999943"/>
                                         <accessibility key="accessibilityConfiguration" label="Resources"/>
-                                        <state key="normal" title="Resources" backgroundImage="Button_Orange"/>
+                                        <state key="normal" title="Resources" backgroundImage="Button_Gray"/>
                                         <connections>
                                             <segue destination="aLy-wL-qzA" kind="presentation" modalTransitionStyle="flipHorizontal" id="Sch-Sp-OwE"/>
                                         </connections>
@@ -98,7 +98,7 @@
                     <navigationItem key="navigationItem" id="F6t-Y0-eo4">
                         <barButtonItem key="leftBarButtonItem" title="Kelku" id="1Y0-PH-9ND">
                             <connections>
-                                <segue destination="V0F-T2-9w1" kind="unwind" unwindAction="returnToKelku:" id="D3X-op-bF5"/>
+                                <segue destination="V0F-T2-9w1" kind="unwind" unwindAction="unwindSeque:" id="RN2-rH-wk0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -108,7 +108,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="524-a6-0Z6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="V0F-T2-9w1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="904" y="1245"/>
+            <point key="canvasLocation" x="3286" y="-296"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bH0-Ch-s6E">
@@ -131,10 +131,10 @@
             </objects>
             <point key="canvasLocation" x="116.8" y="476.76161919040482"/>
         </scene>
-        <!--Resources View Controller-->
+        <!--View Controller-->
         <scene sceneID="bTB-hq-ELc">
             <objects>
-                <viewController id="aLy-wL-qzA" customClass="ResourcesViewController" customModule="LearnNavi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aLy-wL-qzA" customClass="LNViewController" customModule="LearnNavi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CsT-Ig-m2A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,25 +143,28 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="M8G-0K-nzm">
-                                <rect key="frame" x="40" y="302" width="334" height="132"/>
+                                <rect key="frame" x="40" y="278" width="334" height="180"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozI-4r-C3o" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
                                         <accessibility key="accessibilityConfiguration" label="About"/>
-                                        <state key="normal" title="About"/>
+                                        <state key="normal" title="About" backgroundImage="Button_Gray"/>
                                         <connections>
                                             <segue destination="wqR-dC-B53" kind="presentation" modalTransitionStyle="crossDissolve" id="Jba-WX-3Is"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOx-Ra-BrL" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="49" width="334" height="34"/>
+                                        <rect key="frame" x="0.0" y="65" width="334" height="50"/>
                                         <accessibility key="accessibilityConfiguration" label="https://learnnavi.org"/>
-                                        <state key="normal" title="LearnNa'vi.org"/>
+                                        <state key="normal" title="LearnNa'vi.org" backgroundImage="Button_Gray"/>
+                                        <connections>
+                                            <action selector="openLearnNaviWebSite:" destination="aLy-wL-qzA" eventType="touchUpInside" id="JWD-6P-h8g"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7O3-NZ-epj" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="98" width="334" height="34"/>
+                                        <rect key="frame" x="0.0" y="130" width="334" height="50"/>
                                         <accessibility key="accessibilityConfiguration" label="Disclaimer"/>
-                                        <state key="normal" title="Disclaimer"/>
+                                        <state key="normal" title="Disclaimer" backgroundImage="Button_Gray"/>
                                         <connections>
                                             <segue destination="rxD-4F-hET" kind="presentation" modalTransitionStyle="crossDissolve" id="MSf-Ix-heD"/>
                                         </connections>
@@ -171,16 +174,15 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXN-70-6Or" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
                                 <rect key="frame" x="40" y="586" width="334" height="50"/>
                                 <accessibility key="accessibilityConfiguration" label="Back"/>
-                                <state key="normal" title="Back" backgroundImage="Button_Gray"/>
+                                <state key="normal" title="Back" backgroundImage="Button_Purple"/>
                                 <connections>
-                                    <segue destination="lDA-7b-h5d" kind="unwind" unwindAction="returnToKelku:" id="9bF-7r-xZ9"/>
+                                    <segue destination="lDA-7b-h5d" kind="unwind" unwindAction="unwindSeque:" id="iR7-DJ-bIr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resources" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NT-4y-1ZR">
-                                <rect key="frame" x="40" y="120" width="334" height="50"/>
+                                <rect key="frame" x="40" y="120" width="334" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="OLm-b0-wmF"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Zre-Zh-XkQ"/>
+                                    <constraint firstAttribute="height" constant="60" id="OLm-b0-wmF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -206,13 +208,13 @@
                         <viewLayoutGuide key="safeArea" id="KiY-Py-hbQ"/>
                     </view>
                     <connections>
-                        <outlet property="backButton" destination="lXN-70-6Or" id="b0T-id-dVo"/>
+                        <outlet property="backButton" destination="lXN-70-6Or" id="Krk-c0-XUT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avT-bl-XSg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="lDA-7b-h5d" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1753.6231884057972" y="474.45652173913049"/>
+            <point key="canvasLocation" x="2129" y="840"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="uEL-9F-7E4">
@@ -226,7 +228,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1H-zG-d3e">
-                                <rect key="frame" x="40" y="170" width="334" height="392"/>
+                                <rect key="frame" x="40" y="170" width="334" height="376"/>
                                 <string key="text">Learn Na'vi was created by Zoë Snow (Seze) from the Learn Na'vi online community.  It was created for the online community as a reference and learning tool.  Special thanks goes to all the members from the Learn Na'vi online community that helped with the development process...</string>
                                 <color key="textColor" red="1" green="0.53461682349999995" blue="0.01327203937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
@@ -241,17 +243,17 @@
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5EG-Zn-thP" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
-                                <rect key="frame" x="40" y="602" width="334" height="34"/>
+                                <rect key="frame" x="40" y="586" width="334" height="50"/>
                                 <accessibility key="accessibilityConfiguration" label="Back"/>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" title="Back" backgroundImage="Button_Purple"/>
                                 <connections>
-                                    <segue destination="B1p-c9-fuV" kind="unwind" unwindAction="returnToResources:" id="CuP-NY-ABd"/>
+                                    <segue destination="B1p-c9-fuV" kind="unwind" unwindAction="unwindSeque:" id="JDR-bK-D6C"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DiN-BM-qpv">
-                                <rect key="frame" x="40" y="120" width="334" height="50"/>
+                                <rect key="frame" x="40" y="120" width="334" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="VHc-4H-WNU"/>
+                                    <constraint firstAttribute="height" constant="60" id="VHc-4H-WNU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -281,20 +283,101 @@
                         <viewLayoutGuide key="safeArea" id="dc4-1E-jAQ"/>
                     </view>
                     <connections>
-                        <outlet property="aboutText" destination="h1H-zG-d3e" id="VEV-Nc-YWx"/>
-                        <outlet property="backButton" destination="5EG-Zn-thP" id="9RJ-Ii-hY3"/>
-                        <outlet property="versionLabel" destination="9Uv-3d-cOT" id="j4R-X4-EIG"/>
+                        <outlet property="backButton" destination="5EG-Zn-thP" id="1VN-Jv-QRE"/>
+                        <outlet property="versionLabel" destination="9Uv-3d-cOT" id="CH8-0n-bBU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8j-eL-G3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="B1p-c9-fuV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2910.144927536232" y="110.86956521739131"/>
+            <point key="canvasLocation" x="3286" y="475"/>
         </scene>
-        <!--Disclaimer View Controller-->
+        <!--View Controller-->
+        <scene sceneID="1jG-BV-xSL">
+            <objects>
+                <viewController id="X00-GG-CQw" customClass="LNViewController" customModule="LearnNavi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nZ1-hG-Rgi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" image="Background-Resources" translatesAutoresizingMaskIntoConstraints="NO" id="GGB-1n-bP3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ETQ-r6-ZtA">
+                                <rect key="frame" x="40" y="278" width="334" height="180"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mjp-jS-9R1" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" label="About"/>
+                                        <state key="normal" title="Entries" backgroundImage="Button_Gray"/>
+                                        <connections>
+                                            <segue destination="hqH-ba-4JE" kind="show" id="PKn-aT-Nys"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgu-33-7Jt" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="65" width="334" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" label="https://learnnavi.org"/>
+                                        <state key="normal" title="View PDF" backgroundImage="Button_Gray"/>
+                                        <connections>
+                                            <action selector="openDictionaryPDF:" destination="X00-GG-CQw" eventType="touchUpInside" id="BfQ-Be-ubv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSh-2I-cKR" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="130" width="334" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" label="Disclaimer"/>
+                                        <state key="normal" title="Check for Update" backgroundImage="Button_Gray"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8a-GZ-4z3" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
+                                <rect key="frame" x="40" y="586" width="334" height="50"/>
+                                <accessibility key="accessibilityConfiguration" label="Back"/>
+                                <state key="normal" title="Back" backgroundImage="Button_Purple"/>
+                                <connections>
+                                    <segue destination="ZJq-U1-bju" kind="unwind" unwindAction="unwindSeque:" id="SgQ-8C-YP3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dictionary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TjG-LK-uPn">
+                                <rect key="frame" x="40" y="120" width="334" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Aws-8D-dn3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GGB-1n-bP3" firstAttribute="leading" secondItem="nZ1-hG-Rgi" secondAttribute="leading" id="FQP-8m-aNb"/>
+                            <constraint firstItem="cQJ-rq-llr" firstAttribute="trailing" secondItem="ETQ-r6-ZtA" secondAttribute="trailing" constant="40" id="Ilu-uE-thO"/>
+                            <constraint firstItem="a8a-GZ-4z3" firstAttribute="leading" secondItem="cQJ-rq-llr" secondAttribute="leading" constant="40" id="Rm9-Mu-O6B"/>
+                            <constraint firstItem="cQJ-rq-llr" firstAttribute="bottom" secondItem="a8a-GZ-4z3" secondAttribute="bottom" constant="100" id="aMH-Nj-dCG"/>
+                            <constraint firstItem="cQJ-rq-llr" firstAttribute="trailing" secondItem="TjG-LK-uPn" secondAttribute="trailing" constant="40" id="bdT-kz-ja9"/>
+                            <constraint firstItem="TjG-LK-uPn" firstAttribute="leading" secondItem="cQJ-rq-llr" secondAttribute="leading" constant="40" id="dhH-Nm-tb3"/>
+                            <constraint firstItem="ETQ-r6-ZtA" firstAttribute="leading" secondItem="cQJ-rq-llr" secondAttribute="leading" constant="40" id="edk-iA-Nud"/>
+                            <constraint firstItem="ETQ-r6-ZtA" firstAttribute="centerY" secondItem="nZ1-hG-Rgi" secondAttribute="centerY" id="fjV-DK-Wzy"/>
+                            <constraint firstItem="GGB-1n-bP3" firstAttribute="top" secondItem="nZ1-hG-Rgi" secondAttribute="top" id="hHd-Br-daJ"/>
+                            <constraint firstItem="TjG-LK-uPn" firstAttribute="top" secondItem="cQJ-rq-llr" secondAttribute="top" constant="100" id="jSa-bw-TpE"/>
+                            <constraint firstItem="cQJ-rq-llr" firstAttribute="trailing" secondItem="a8a-GZ-4z3" secondAttribute="trailing" constant="40" id="m17-Q6-tqy"/>
+                            <constraint firstItem="GGB-1n-bP3" firstAttribute="trailing" secondItem="nZ1-hG-Rgi" secondAttribute="trailing" id="o9D-ii-g17"/>
+                            <constraint firstItem="GGB-1n-bP3" firstAttribute="bottom" secondItem="nZ1-hG-Rgi" secondAttribute="bottom" id="yu5-qw-U3U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cQJ-rq-llr"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="a8a-GZ-4z3" id="026-pL-tax"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10f-hF-QHh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ZJq-U1-bju" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2130" y="115"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="JqZ-hw-wvE">
             <objects>
-                <viewController id="rxD-4F-hET" customClass="DisclaimerViewController" customModule="LearnNavi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rxD-4F-hET" customClass="LNViewController" customModule="LearnNavi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qTR-Ln-vkz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -303,25 +386,24 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJV-3j-0vO">
-                                <rect key="frame" x="40" y="170" width="334" height="392"/>
+                                <rect key="frame" x="40" y="170" width="334" height="376"/>
                                 <string key="text">The Na'vi language was created by Paul Frommer. Much of the information displayed in this App was written by Prof. Frommer and is presented here for educational purposes only. Learn Na'vi is not affiliated with the official Avatar website, James Cameron, or the Twentieth Century-Fox Film Corporation. All trademarks and servicemarks are the properties of their respective owners.</string>
                                 <color key="textColor" red="1" green="0.53461682349999995" blue="0.01327203937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cq1-Z1-JD6" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
-                                <rect key="frame" x="40" y="602" width="334" height="34"/>
+                                <rect key="frame" x="40" y="586" width="334" height="50"/>
                                 <accessibility key="accessibilityConfiguration" label="Back"/>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" title="Back" backgroundImage="Button_Purple"/>
                                 <connections>
-                                    <segue destination="Drm-Bp-oCY" kind="unwind" unwindAction="returnToResources:" id="8q1-pu-Fsi"/>
+                                    <segue destination="Drm-Bp-oCY" kind="unwind" unwindAction="unwindSeque:" id="AfW-Yz-38k"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disclaimer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVF-dt-oNN">
-                                <rect key="frame" x="40" y="120" width="334" height="50"/>
+                                <rect key="frame" x="40" y="120" width="334" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="eYj-NX-x8j"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="vVC-uW-K1I"/>
+                                    <constraint firstAttribute="height" constant="60" id="eYj-NX-x8j"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -348,20 +430,19 @@
                         <viewLayoutGuide key="safeArea" id="Y5c-UA-4hf"/>
                     </view>
                     <connections>
-                        <outlet property="backButton" destination="Cq1-Z1-JD6" id="QDV-S6-Fko"/>
+                        <outlet property="backButton" destination="Cq1-Z1-JD6" id="Vbi-i3-QGw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cIX-Cw-4un" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Drm-Bp-oCY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2910" y="851"/>
+            <point key="canvasLocation" x="3286" y="1215"/>
         </scene>
     </scenes>
     <resources>
         <image name="Background" width="414" height="736"/>
         <image name="Background-Resources" width="414" height="736"/>
         <image name="Button_Gray" width="280" height="50"/>
-        <image name="Button_Orange" width="280" height="50"/>
         <image name="Button_Purple" width="280" height="50"/>
     </resources>
 </document>

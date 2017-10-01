@@ -1,21 +1,22 @@
 //
-//  ResourcesViewController.swift
+//  LNViewController.swift
 //  LearnNavi
 //
-//  Created by Zoe Snow on 9/29/17.
+//  Created by Zoe Snow on 10/1/17.
 //  Copyright © 2017 Learn Na'vi. All rights reserved.
 //
 
 import UIKit
 
-class ResourcesViewController: UIViewController {
+class LNViewController: UIViewController {
 
     // MARK: - Outlets
-    @IBOutlet weak var backButton: LNButton!
+    @IBOutlet weak var backButton: LNButton?
     
     // MARK: - Actions
-    @IBAction func returnToResources(_ seque: UIStoryboardSegue) {
-        
+    @IBAction func unwindSeque(_ seque: UIStoryboardSegue) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.setToolbarHidden(true, animated: false)
     }
     
     @IBAction func openLearnNaviWebSite(_ sender: UIButton) {
@@ -27,19 +28,33 @@ class ResourcesViewController: UIViewController {
         }
     }
     
+    @IBAction func openDictionaryPDF(_ sender: UIButton) {
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(URL(string: "https://eanaeltu.learnnavi.org/dicts/NaviDictionary.pdf")!, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(URL(string: "https://eanaeltu.learnnavi.org/dicts/NaviDictionary.pdf")!)
+            // Fallback on earlier versions
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        backButton.setBackgroundImage(UIImage.init(named: "Button_Gray"), for: .normal)
-        // Do any additional setup after loading the view.
+        
+        // Configure the back button
+        configureBackButton()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    func configureBackButton() {
+        if backButton != nil {
+            backButton!.setBackgroundImage(UIImage.init(named: "Button_Purple"), for: .normal)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

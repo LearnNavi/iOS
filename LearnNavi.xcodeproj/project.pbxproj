@@ -8,17 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		090C87B31F8049EA00980610 /* LNButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090C87B21F8049EA00980610 /* LNButton.swift */; };
-		092BEC7A1F7F4D5C005A2918 /* DisclaimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092BEC791F7F4D5C005A2918 /* DisclaimerViewController.swift */; };
 		092BEC7C1F7F4D69005A2918 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092BEC7B1F7F4D69005A2918 /* AboutViewController.swift */; };
 		092BEC7F1F7F607B005A2918 /* DictionaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092BEC7E1F7F607B005A2918 /* DictionaryTableViewController.swift */; };
 		092BEC811F7FE838005A2918 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 092BEC801F7FE838005A2918 /* LaunchScreen.storyboard */; };
 		098913411F7F3A64006D337D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098913401F7F3A64006D337D /* AppDelegate.swift */; };
-		098913431F7F3A64006D337D /* KelkuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098913421F7F3A64006D337D /* KelkuViewController.swift */; };
 		098913461F7F3A64006D337D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 098913441F7F3A64006D337D /* Main.storyboard */; };
 		098913481F7F3A64006D337D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 098913471F7F3A64006D337D /* Assets.xcassets */; };
 		098913561F7F3A64006D337D /* LearnNaviTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098913551F7F3A64006D337D /* LearnNaviTests.swift */; };
 		098913611F7F3A64006D337D /* LearnNaviUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098913601F7F3A64006D337D /* LearnNaviUITests.swift */; };
-		098914581F7F432C006D337D /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098914571F7F432C006D337D /* ResourcesViewController.swift */; };
+		099F72081F8085330038261B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F72071F8085330038261B /* Config.swift */; };
+		099F720A1F8132160038261B /* LNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F72091F8132160038261B /* LNViewController.swift */; };
+		099F720C1F8136B60038261B /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F720B1F8136B60038261B /* DictionaryViewController.swift */; };
+		099F720E1F8139760038261B /* LNConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 099F720D1F8139760038261B /* LNConfig.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,13 +41,11 @@
 
 /* Begin PBXFileReference section */
 		090C87B21F8049EA00980610 /* LNButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNButton.swift; sourceTree = "<group>"; };
-		092BEC791F7F4D5C005A2918 /* DisclaimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerViewController.swift; sourceTree = "<group>"; };
 		092BEC7B1F7F4D69005A2918 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		092BEC7E1F7F607B005A2918 /* DictionaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTableViewController.swift; sourceTree = "<group>"; };
 		092BEC801F7FE838005A2918 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0989133D1F7F3A64006D337D /* LearnNavi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnNavi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		098913401F7F3A64006D337D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		098913421F7F3A64006D337D /* KelkuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KelkuViewController.swift; sourceTree = "<group>"; };
 		098913451F7F3A64006D337D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		098913471F7F3A64006D337D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0989134C1F7F3A64006D337D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,7 +55,10 @@
 		0989135C1F7F3A64006D337D /* LearnNaviUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnNaviUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		098913601F7F3A64006D337D /* LearnNaviUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnNaviUITests.swift; sourceTree = "<group>"; };
 		098913621F7F3A64006D337D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		098914571F7F432C006D337D /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
+		099F72071F8085330038261B /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		099F72091F8132160038261B /* LNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNViewController.swift; sourceTree = "<group>"; };
+		099F720B1F8136B60038261B /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
+		099F720D1F8139760038261B /* LNConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LNConfig.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,17 +109,18 @@
 		0989133F1F7F3A64006D337D /* LearnNavi */ = {
 			isa = PBXGroup;
 			children = (
-				098913401F7F3A64006D337D /* AppDelegate.swift */,
-				092BEC7E1F7F607B005A2918 /* DictionaryTableViewController.swift */,
-				098913421F7F3A64006D337D /* KelkuViewController.swift */,
-				098913441F7F3A64006D337D /* Main.storyboard */,
-				098913471F7F3A64006D337D /* Assets.xcassets */,
-				092BEC791F7F4D5C005A2918 /* DisclaimerViewController.swift */,
 				092BEC7B1F7F4D69005A2918 /* AboutViewController.swift */,
+				098913401F7F3A64006D337D /* AppDelegate.swift */,
+				098913471F7F3A64006D337D /* Assets.xcassets */,
+				099F72071F8085330038261B /* Config.swift */,
+				092BEC7E1F7F607B005A2918 /* DictionaryTableViewController.swift */,
+				099F720B1F8136B60038261B /* DictionaryViewController.swift */,
 				0989134C1F7F3A64006D337D /* Info.plist */,
-				098914571F7F432C006D337D /* ResourcesViewController.swift */,
 				092BEC801F7FE838005A2918 /* LaunchScreen.storyboard */,
 				090C87B21F8049EA00980610 /* LNButton.swift */,
+				099F72091F8132160038261B /* LNViewController.swift */,
+				098913441F7F3A64006D337D /* Main.storyboard */,
+				099F720D1F8139760038261B /* LNConfig.plist */,
 			);
 			path = LearnNavi;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				099F720E1F8139760038261B /* LNConfig.plist in Resources */,
 				098913481F7F3A64006D337D /* Assets.xcassets in Resources */,
 				092BEC811F7FE838005A2918 /* LaunchScreen.storyboard in Resources */,
 				098913461F7F3A64006D337D /* Main.storyboard in Resources */,
@@ -282,7 +286,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "#!/bin/bash\n\n# This script automatically sets the version and short version string of\n# an Xcode project from the Git repository containing the project.\n#\n# To use this script in Xcode 4, add the contents to a \"Run Script\" build\n# phase for your application target.\n\nset -o errexit\nset -o nounset\n\nINFO_PLIST=\"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Info\"\n\n# Use the latest version tag for CFBundleShortVersionString. I tag releases\n# in Git using the format v0.0.0; this assumes you're doing the same.\n#SHORT_VERSION=$(git --git-dir=\"${PROJECT_DIR}/.git\" --work-tree=\"${PROJECT_DIR}\" describe --dirty | sed -e 's/^v//' -e 's/g//')\n\n# I'd like to use the Git commit hash for CFBundleVersion.\nVERSION=$(git --git-dir=\"${PROJECT_DIR}/.git\" --work-tree=\"${PROJECT_DIR}\" rev-parse --short HEAD)\n\n# But Apple wants this value to be a monotonically increasing integer, so\n# instead use the number of commits on the master branch. If you like to\n# play fast and loose with your Git history, this may cause you problems.\n# Thanks to @amrox for pointing out the issue and fix.\nBUILD_NUM=$(git --git-dir=\"${PROJECT_DIR}/.git\" --work-tree=\"${PROJECT_DIR}\" rev-list master | wc -l)\n\n#defaults write $INFO_PLIST CFBundleShortVersionString $SHORT_VERSION\ndefaults write $INFO_PLIST GIT_HASH $VERSION\ndefaults write $INFO_PLIST CFBundleVersion $BUILD_NUM";
+			shellScript = "#!/bin/bash\n\n# This script automatically sets the version and short version string of\n# an Xcode project from the Git repository containing the project.\n#\n# To use this script in Xcode 4, add the contents to a \"Run Script\" build\n# phase for your application target.\n\nset -o errexit\nset -o nounset\n\nINFO_PLIST=\"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Info\"\n\n# Use the latest version tag for CFBundleShortVersionString. I tag releases\n# in Git using the format v0.0.0; this assumes you're doing the same.\n#SHORT_VERSION=$(git --git-dir=\"${PROJECT_DIR}/.git\" --work-tree=\"${PROJECT_DIR}\" describe --dirty | sed -e 's/^v//' -e 's/g//')\n\n# I'd like to use the Git commit hash for CFBundleVersion.\nVERSION=$(git --git-dir=\"${PROJECT_DIR}/.git\" --work-tree=\"${PROJECT_DIR}\" rev-parse --short HEAD)\n\n# But Apple wants this value to be a monotonically increasing integer, so\n# instead use the number of commits on the master branch. If you like to\n# play fast and loose with your Git history, this may cause you problems.\n# Thanks to @amrox for pointing out the issue and fix.\nBUILD_NUM=$(git --git-dir=\"${PROJECT_DIR}/.git\" --work-tree=\"${PROJECT_DIR}\" rev-list master | wc -l)\n\n#defaults write $INFO_PLIST CFBundleShortVersionString $SHORT_VERSION\ndefaults write $INFO_PLIST LNGitHash $VERSION\ndefaults write $INFO_PLIST CFBundleVersion $BUILD_NUM";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -291,11 +295,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				098914581F7F432C006D337D /* ResourcesViewController.swift in Sources */,
+				099F720C1F8136B60038261B /* DictionaryViewController.swift in Sources */,
+				099F720A1F8132160038261B /* LNViewController.swift in Sources */,
 				092BEC7F1F7F607B005A2918 /* DictionaryTableViewController.swift in Sources */,
 				090C87B31F8049EA00980610 /* LNButton.swift in Sources */,
-				092BEC7A1F7F4D5C005A2918 /* DisclaimerViewController.swift in Sources */,
-				098913431F7F3A64006D337D /* KelkuViewController.swift in Sources */,
+				099F72081F8085330038261B /* Config.swift in Sources */,
 				092BEC7C1F7F4D69005A2918 /* AboutViewController.swift in Sources */,
 				098913411F7F3A64006D337D /* AppDelegate.swift in Sources */,
 			);
@@ -392,7 +396,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -443,7 +447,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -456,6 +460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5X7KP44M4V;
 				INFOPLIST_FILE = LearnNavi/Info.plist;
@@ -463,6 +468,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.learnnavi.mobile.ios.LearnNavi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -473,6 +480,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5X7KP44M4V;
 				INFOPLIST_FILE = LearnNavi/Info.plist;
@@ -480,6 +489,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.learnnavi.mobile.ios.LearnNavi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

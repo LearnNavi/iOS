@@ -17,7 +17,7 @@ class DictionaryTableViewController: UITableViewController {
         self.navigationController?.setToolbarHidden(false, animated: true)
         
         // Add a background view to the table view
-        let backgroundImage = UIImage(named: "Background-Center")
+        let backgroundImage = UIImage(named: "Background-Resources")
         let imageView = UIImageView(image: backgroundImage)
         self.tableView.backgroundView = imageView
         

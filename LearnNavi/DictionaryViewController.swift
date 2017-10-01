@@ -1,18 +1,15 @@
 //
-//  KelkuViewController.swift
+//  DictionaryViewController.swift
 //  LearnNavi
 //
-//  Created by Zoe Snow on 9/29/17.
+//  Created by Zoe Snow on 10/1/17.
 //  Copyright © 2017 Learn Na'vi. All rights reserved.
 //
 
 import UIKit
 
-class KelkuViewController: UIViewController {
+class DictionaryViewController: LNViewController {
 
-    // MARK: - Properties
-    
-    
     // MARK: - Actions
     @IBAction func returnToKelku(_ seque: UIStoryboardSegue) {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
@@ -21,13 +18,24 @@ class KelkuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }
-

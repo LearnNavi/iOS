@@ -15,7 +15,7 @@ class LNButton: UIButton {
         super.init(coder: aDecoder)
         
         // set other operations after super.init, if required
-        self.setBackgroundImage(UIImage.init(named: "Button_Purple"), for: .normal)
+        self.setBackgroundImage(UIImage.init(named: "Button_Gray"), for: .normal)
         self.setBackgroundImage(UIImage.init(named: "Button_Orange"), for: .selected)
         self.setBackgroundImage(UIImage.init(named: "Button_Orange"), for: .highlighted)
         self.contentEdgeInsets = UIEdgeInsetsMake(10.0, 0.0, 0.0, 0.0)

@@ -31,20 +31,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="7VE-fB-G8N">
-                                <rect key="frame" x="164.66666666666666" y="446.66666666666663" width="85" height="82.999999999999886"/>
+                                <rect key="frame" x="40" y="440.66666666666663" width="334" height="114.99999999999989"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Akq-MD-Rw9" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="85" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
                                         <accessibility key="accessibilityConfiguration" label="Dictionary"/>
-                                        <state key="normal" title="Dictionary"/>
+                                        <state key="normal" title="Dictionary" backgroundImage="Button_Purple"/>
                                         <connections>
                                             <segue destination="hqH-ba-4JE" kind="show" id="3cM-Cg-iUx"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbd-Ud-n1E" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="49" width="85" height="33.999999999999943"/>
+                                        <rect key="frame" x="0.0" y="65" width="334" height="49.999999999999943"/>
                                         <accessibility key="accessibilityConfiguration" label="Resources"/>
-                                        <state key="normal" title="Resources"/>
+                                        <state key="normal" title="Resources" backgroundImage="Button_Orange"/>
                                         <connections>
                                             <segue destination="aLy-wL-qzA" kind="presentation" modalTransitionStyle="flipHorizontal" id="Sch-Sp-OwE"/>
                                         </connections>
@@ -54,11 +54,12 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="KKy-9c-OoQ" firstAttribute="top" secondItem="3V6-r7-Bnr" secondAttribute="top" id="4c0-CG-sjT"/>
-                            <constraint firstItem="7VE-fB-G8N" firstAttribute="centerX" secondItem="3V6-r7-Bnr" secondAttribute="centerX" id="JSB-73-99q"/>
                             <constraint firstItem="KKy-9c-OoQ" firstAttribute="trailing" secondItem="3V6-r7-Bnr" secondAttribute="trailing" id="TEW-KN-Ifa"/>
                             <constraint firstItem="KKy-9c-OoQ" firstAttribute="bottom" secondItem="3V6-r7-Bnr" secondAttribute="bottom" id="YQf-Qf-ym6"/>
+                            <constraint firstItem="5yS-K0-i4j" firstAttribute="trailing" secondItem="7VE-fB-G8N" secondAttribute="trailing" constant="40" id="aiL-qI-9n8"/>
                             <constraint firstItem="KKy-9c-OoQ" firstAttribute="leading" secondItem="3V6-r7-Bnr" secondAttribute="leading" id="cWf-W5-7Br"/>
-                            <constraint firstItem="7VE-fB-G8N" firstAttribute="centerY" secondItem="3V6-r7-Bnr" secondAttribute="centerY" constant="120" id="cpy-HZ-Gt0"/>
+                            <constraint firstItem="7VE-fB-G8N" firstAttribute="centerY" secondItem="3V6-r7-Bnr" secondAttribute="centerY" constant="130" id="cpy-HZ-Gt0"/>
+                            <constraint firstItem="7VE-fB-G8N" firstAttribute="leading" secondItem="5yS-K0-i4j" secondAttribute="leading" constant="40" id="hZY-mA-kgz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5yS-K0-i4j"/>
                     </view>
@@ -142,10 +143,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="M8G-0K-nzm">
-                                <rect key="frame" x="148.66666666666669" y="262" width="117.00000000000006" height="132"/>
+                                <rect key="frame" x="40" y="302" width="334" height="132"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozI-4r-C3o" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="117.00000000000003" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
                                         <accessibility key="accessibilityConfiguration" label="About"/>
                                         <state key="normal" title="About"/>
                                         <connections>
@@ -153,12 +154,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOx-Ra-BrL" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="49" width="117.00000000000003" height="34"/>
+                                        <rect key="frame" x="0.0" y="49" width="334" height="34"/>
                                         <accessibility key="accessibilityConfiguration" label="https://learnnavi.org"/>
                                         <state key="normal" title="LearnNa'vi.org"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7O3-NZ-epj" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="98" width="117.00000000000003" height="34"/>
+                                        <rect key="frame" x="0.0" y="98" width="334" height="34"/>
                                         <accessibility key="accessibilityConfiguration" label="Disclaimer"/>
                                         <state key="normal" title="Disclaimer"/>
                                         <connections>
@@ -168,27 +169,45 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXN-70-6Or" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
-                                <rect key="frame" x="187.66666666666666" y="602" width="40" height="34"/>
+                                <rect key="frame" x="40" y="586" width="334" height="50"/>
                                 <accessibility key="accessibilityConfiguration" label="Back"/>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" title="Back" backgroundImage="Button_Gray"/>
                                 <connections>
                                     <segue destination="lDA-7b-h5d" kind="unwind" unwindAction="returnToKelku:" id="9bF-7r-xZ9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resources" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NT-4y-1ZR">
+                                <rect key="frame" x="40" y="120" width="334" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OLm-b0-wmF"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Zre-Zh-XkQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DNi-dX-hE5" firstAttribute="trailing" secondItem="KiY-Py-hbQ" secondAttribute="trailing" id="33l-df-vR1"/>
-                            <constraint firstItem="M8G-0K-nzm" firstAttribute="centerY" secondItem="CsT-Ig-m2A" secondAttribute="centerY" constant="-40" id="Jrc-jA-yCd"/>
-                            <constraint firstItem="lXN-70-6Or" firstAttribute="centerX" secondItem="CsT-Ig-m2A" secondAttribute="centerX" id="efw-Cr-XZE"/>
-                            <constraint firstItem="M8G-0K-nzm" firstAttribute="centerX" secondItem="CsT-Ig-m2A" secondAttribute="centerX" id="gXu-PV-VHl"/>
+                            <constraint firstItem="KiY-Py-hbQ" firstAttribute="trailing" secondItem="lXN-70-6Or" secondAttribute="trailing" constant="40" id="4l2-db-4Vr"/>
+                            <constraint firstItem="KiY-Py-hbQ" firstAttribute="trailing" secondItem="7NT-4y-1ZR" secondAttribute="trailing" constant="40" id="5ii-0u-oRf"/>
+                            <constraint firstItem="M8G-0K-nzm" firstAttribute="centerY" secondItem="CsT-Ig-m2A" secondAttribute="centerY" id="Jrc-jA-yCd"/>
+                            <constraint firstItem="7NT-4y-1ZR" firstAttribute="leading" secondItem="KiY-Py-hbQ" secondAttribute="leading" constant="40" id="LWk-vD-NJp"/>
+                            <constraint firstItem="KiY-Py-hbQ" firstAttribute="trailing" secondItem="M8G-0K-nzm" secondAttribute="trailing" constant="40" id="gz4-Ay-9UD"/>
+                            <constraint firstItem="7NT-4y-1ZR" firstAttribute="top" secondItem="KiY-Py-hbQ" secondAttribute="top" constant="100" id="hwV-P8-Erm"/>
                             <constraint firstItem="KiY-Py-hbQ" firstAttribute="bottom" secondItem="lXN-70-6Or" secondAttribute="bottom" constant="100" id="mzh-6B-kKU"/>
+                            <constraint firstItem="M8G-0K-nzm" firstAttribute="leading" secondItem="KiY-Py-hbQ" secondAttribute="leading" constant="40" id="neU-Qr-PtK"/>
                             <constraint firstAttribute="bottom" secondItem="DNi-dX-hE5" secondAttribute="bottom" id="o0w-8p-Yqg"/>
                             <constraint firstItem="DNi-dX-hE5" firstAttribute="top" secondItem="CsT-Ig-m2A" secondAttribute="top" id="qfA-N3-d2j"/>
                             <constraint firstItem="DNi-dX-hE5" firstAttribute="leading" secondItem="KiY-Py-hbQ" secondAttribute="leading" id="uNy-CW-l0r"/>
+                            <constraint firstItem="lXN-70-6Or" firstAttribute="leading" secondItem="KiY-Py-hbQ" secondAttribute="leading" constant="40" id="xLH-yR-OjO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KiY-Py-hbQ"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="lXN-70-6Or" id="b0T-id-dVo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avT-bl-XSg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="lDA-7b-h5d" userLabel="Exit" sceneMemberID="exit"/>
@@ -222,7 +241,7 @@
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5EG-Zn-thP" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
-                                <rect key="frame" x="187" y="602" width="40" height="34"/>
+                                <rect key="frame" x="40" y="602" width="334" height="34"/>
                                 <accessibility key="accessibilityConfiguration" label="Back"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
@@ -252,16 +271,18 @@
                             <constraint firstItem="h1H-zG-d3e" firstAttribute="top" secondItem="dc4-1E-jAQ" secondAttribute="top" constant="150" id="HPk-4T-1jZ"/>
                             <constraint firstAttribute="trailing" secondItem="49t-6C-8p6" secondAttribute="trailing" id="Hdb-XG-oD1"/>
                             <constraint firstItem="DiN-BM-qpv" firstAttribute="top" secondItem="dc4-1E-jAQ" secondAttribute="top" constant="100" id="ZKc-O8-g8d"/>
+                            <constraint firstItem="dc4-1E-jAQ" firstAttribute="trailing" secondItem="5EG-Zn-thP" secondAttribute="trailing" constant="40" id="bYm-gc-y0K"/>
                             <constraint firstItem="dc4-1E-jAQ" firstAttribute="trailing" secondItem="9Uv-3d-cOT" secondAttribute="trailing" constant="20" id="hKf-mW-qCJ"/>
                             <constraint firstItem="9Uv-3d-cOT" firstAttribute="leading" secondItem="dc4-1E-jAQ" secondAttribute="leading" constant="20" id="jgn-s5-jBm"/>
+                            <constraint firstItem="5EG-Zn-thP" firstAttribute="leading" secondItem="dc4-1E-jAQ" secondAttribute="leading" constant="40" id="nTU-Hv-E7u"/>
                             <constraint firstItem="dc4-1E-jAQ" firstAttribute="bottom" secondItem="5EG-Zn-thP" secondAttribute="bottom" constant="100" id="oSA-3V-h0a"/>
-                            <constraint firstItem="5EG-Zn-thP" firstAttribute="centerX" secondItem="038-MR-sRa" secondAttribute="centerX" id="pAk-FI-6se"/>
                             <constraint firstItem="dc4-1E-jAQ" firstAttribute="trailing" secondItem="h1H-zG-d3e" secondAttribute="trailing" constant="40" id="yRa-Aw-Jx3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dc4-1E-jAQ"/>
                     </view>
                     <connections>
                         <outlet property="aboutText" destination="h1H-zG-d3e" id="VEV-Nc-YWx"/>
+                        <outlet property="backButton" destination="5EG-Zn-thP" id="9RJ-Ii-hY3"/>
                         <outlet property="versionLabel" destination="9Uv-3d-cOT" id="j4R-X4-EIG"/>
                     </connections>
                 </viewController>
@@ -289,7 +310,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cq1-Z1-JD6" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
-                                <rect key="frame" x="187" y="602" width="40" height="34"/>
+                                <rect key="frame" x="40" y="602" width="334" height="34"/>
                                 <accessibility key="accessibilityConfiguration" label="Back"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
@@ -313,18 +334,22 @@
                             <constraint firstItem="wJV-3j-0vO" firstAttribute="top" secondItem="Y5c-UA-4hf" secondAttribute="top" constant="150" id="OD7-GQ-1B3"/>
                             <constraint firstItem="Y5c-UA-4hf" firstAttribute="trailing" secondItem="wJV-3j-0vO" secondAttribute="trailing" constant="40" id="PfX-YY-egZ"/>
                             <constraint firstAttribute="bottom" secondItem="Hzw-ER-YCg" secondAttribute="bottom" id="U4E-KS-SWW"/>
+                            <constraint firstItem="Y5c-UA-4hf" firstAttribute="trailing" secondItem="Cq1-Z1-JD6" secondAttribute="trailing" constant="40" id="X2d-Bs-Byy"/>
                             <constraint firstItem="wJV-3j-0vO" firstAttribute="leading" secondItem="Y5c-UA-4hf" secondAttribute="leading" constant="40" id="asQ-R4-rj6"/>
                             <constraint firstItem="Cq1-Z1-JD6" firstAttribute="top" secondItem="wJV-3j-0vO" secondAttribute="bottom" constant="40" id="eTF-Oi-o7F"/>
                             <constraint firstItem="Hzw-ER-YCg" firstAttribute="leading" secondItem="qTR-Ln-vkz" secondAttribute="leading" id="hCh-Sv-Yil"/>
-                            <constraint firstItem="Cq1-Z1-JD6" firstAttribute="centerX" secondItem="qTR-Ln-vkz" secondAttribute="centerX" id="ljh-Ba-D5c"/>
                             <constraint firstItem="Y5c-UA-4hf" firstAttribute="bottom" secondItem="Cq1-Z1-JD6" secondAttribute="bottom" constant="100" id="ogO-Bi-P9f"/>
                             <constraint firstItem="PVF-dt-oNN" firstAttribute="top" secondItem="Y5c-UA-4hf" secondAttribute="top" constant="100" id="omZ-Vk-R9Q"/>
                             <constraint firstAttribute="trailing" secondItem="Hzw-ER-YCg" secondAttribute="trailing" id="pLG-d0-Bd2"/>
                             <constraint firstItem="Y5c-UA-4hf" firstAttribute="trailing" secondItem="PVF-dt-oNN" secondAttribute="trailing" constant="40" id="peN-aB-Irb"/>
                             <constraint firstItem="PVF-dt-oNN" firstAttribute="leading" secondItem="Y5c-UA-4hf" secondAttribute="leading" constant="40" id="pzk-Fl-FGx"/>
+                            <constraint firstItem="Cq1-Z1-JD6" firstAttribute="leading" secondItem="Y5c-UA-4hf" secondAttribute="leading" constant="40" id="s5d-2h-HFY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Y5c-UA-4hf"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="Cq1-Z1-JD6" id="QDV-S6-Fko"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cIX-Cw-4un" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Drm-Bp-oCY" userLabel="Exit" sceneMemberID="exit"/>
@@ -335,5 +360,8 @@
     <resources>
         <image name="Background" width="414" height="736"/>
         <image name="Background-Resources" width="414" height="736"/>
+        <image name="Button_Gray" width="280" height="50"/>
+        <image name="Button_Orange" width="280" height="50"/>
+        <image name="Button_Purple" width="280" height="50"/>
     </resources>
 </document>

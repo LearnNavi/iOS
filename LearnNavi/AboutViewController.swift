@@ -11,12 +11,14 @@ import UIKit
 class AboutViewController: UIViewController {
 
     // MARK: - Outlets
+    @IBOutlet weak var backButton: LNButton!
     @IBOutlet weak var aboutText: UITextView!
     @IBOutlet weak var aboutTextShadow: UITextView!
     @IBOutlet weak var versionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        backButton.setBackgroundImage(UIImage.init(named: "Button_Gray"), for: .normal)
         versionLabel.text = "Version " + bundleVersionNumber() + " (" + bundleBuildNumber() + ")"
         // Do any additional setup after loading the view.
     }

@@ -10,9 +10,12 @@ import UIKit
 
 class DisclaimerViewController: UIViewController {
 
+    // MARK: - Outlets
+    @IBOutlet weak var backButton: LNButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        backButton.setBackgroundImage(UIImage.init(named: "Button_Gray"), for: .normal)
         // Do any additional setup after loading the view.
     }
 

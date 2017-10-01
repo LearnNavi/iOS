@@ -182,7 +182,7 @@
                                     <constraint firstAttribute="height" constant="50" id="OLm-b0-wmF"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Zre-Zh-XkQ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -253,7 +253,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="VHc-4H-WNU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -323,7 +323,7 @@
                                     <constraint firstAttribute="height" constant="50" id="eYj-NX-x8j"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="vVC-uW-K1I"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>

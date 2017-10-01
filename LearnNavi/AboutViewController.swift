@@ -19,7 +19,7 @@ class AboutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         backButton.setBackgroundImage(UIImage.init(named: "Button_Gray"), for: .normal)
-        versionLabel.text = "Version " + bundleVersionNumber() + " (" + bundleBuildNumber() + ")"
+        versionLabel.text = "Version " + bundleVersionNumber() + " (" + bundleGitHash() + "-" + bundleBuildNumber() + ")"
         // Do any additional setup after loading the view.
     }
 
@@ -34,6 +34,10 @@ class AboutViewController: UIViewController {
     
     func bundleBuildNumber() -> String {
         return Bundle.main.infoDictionary?["CFBundleVersion"] as! String
+    }
+    
+    func bundleGitHash() -> String {
+        return Bundle.main.infoDictionary?["GIT_HASH"] as! String
     }
     
     /*

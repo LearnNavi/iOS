@@ -236,7 +236,7 @@
                                 <rect key="frame" x="20" y="691.66666666666652" width="374" height="24.333333333333371"/>
                                 <color key="backgroundColor" red="0.14130434780000001" green="0.14130434780000001" blue="0.14130434780000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.95783027569015533" blue="0.8817842717915324" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.13795942874197342" green="0.95783027569015533" blue="0.22484367785441367" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.46000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>

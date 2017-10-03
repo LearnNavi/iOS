@@ -96,7 +96,7 @@
                         <barButtonItem title="Item" id="BfK-qt-Dby"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="F6t-Y0-eo4">
-                        <barButtonItem key="leftBarButtonItem" title="Kelku" id="1Y0-PH-9ND">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="1Y0-PH-9ND">
                             <connections>
                                 <segue destination="V0F-T2-9w1" kind="unwind" unwindAction="unwindSeque:" id="RN2-rH-wk0"/>
                             </connections>

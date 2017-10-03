@@ -6,8 +6,8 @@
     </header>
     <body>
       <trans-unit id="1Y0-PH-9ND.title">
-        <source>Kelku</source>
-        <note>Class = "UIBarButtonItem"; title = "Kelku"; ObjectID = "1Y0-PH-9ND";</note>
+        <source>Back</source>
+        <note>Class = "UIBarButtonItem"; title = "Back"; ObjectID = "1Y0-PH-9ND";</note>
       </trans-unit>
       <trans-unit id="5EG-Zn-thP.accessibilityLabel">
         <source>Back</source>

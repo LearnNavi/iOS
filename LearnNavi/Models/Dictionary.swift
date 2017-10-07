@@ -23,11 +23,20 @@ class Dictionary {
         documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         dbUrl = path
         openDatabaseConnection()
-        schema.version.selectAll()
+        getVersion()
     }
     
-    public func fetchEntries() {
-        schema.entry.selectAll()
+    public func fetchEntries() -> [Entry] {
+        return schema.entry.selectAll()
+    }
+    
+    func getVersion() {
+        do {
+            version = try schema.version.getVersion()
+        } catch {
+            print("Could not fetch version from database...")
+        }
+        
     }
     
     func openDatabaseConnection() {

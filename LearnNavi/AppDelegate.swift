@@ -30,8 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        //let version = bundledDictionary.version!
-        //print("Database version: \(version)")
+        let version = bundledDictionary.version!
+        print("Database version: \(version)")
         
         return true
     }

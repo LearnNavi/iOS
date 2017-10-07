@@ -24,7 +24,6 @@ class SQLTable<Model : Codable> {
             let items: [Model] = try db.prepare(table).map { row in
                 return try row.decode()
             }
-            print(items)
             return items
             
         } catch {

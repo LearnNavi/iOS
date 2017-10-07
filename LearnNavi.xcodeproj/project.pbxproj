@@ -31,6 +31,7 @@
 		099F723A1F8150390038261B /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099F72391F8150380038261B /* SQLite.framework */; };
 		099F723B1F8150390038261B /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 099F72391F8150380038261B /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		09E6A1EA1F81515300D93133 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E6A1E91F81515300D93133 /* Dictionary.swift */; };
+		09F14AB01F8942920080BD15 /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F14AAF1F8942920080BD15 /* EntryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		099F72391F8150380038261B /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
 		09E6A1E91F81515300D93133 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		09E6A1EF1F831C1700D93133 /* database.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = database.sqlite; sourceTree = "<group>"; };
+		09F14AAF1F8942920080BD15 /* EntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 				099F72091F8132160038261B /* LNViewController.swift */,
 				098913441F7F3A64006D337D /* Main.storyboard */,
 				099F720D1F8139760038261B /* LNConfig.plist */,
+				09F14AAF1F8942920080BD15 /* EntryTableViewCell.swift */,
 			);
 			path = LearnNavi;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				092BEC7F1F7F607B005A2918 /* DictionaryTableViewController.swift in Sources */,
 				091F35561F8735560094B60B /* Schema.swift in Sources */,
 				091F356B1F8863EB0094B60B /* SQLTable.swift in Sources */,
+				09F14AB01F8942920080BD15 /* EntryTableViewCell.swift in Sources */,
 				090C87B31F8049EA00980610 /* LNButton.swift in Sources */,
 				09E6A1EA1F81515300D93133 /* Dictionary.swift in Sources */,
 				099F72081F8085330038261B /* Config.swift in Sources */,

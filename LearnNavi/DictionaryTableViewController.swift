@@ -44,25 +44,32 @@ class DictionaryTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return entries.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cellIdentifier = "EntryTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? EntryTableViewCell else {
+            fatalError("The dequeued cell is not an instance of EntryTableViewCell")
+        }
 
-        // Configure the cell...
-
+        // Fetches the appropriate meal for the data source layout.
+        let entry = entries[indexPath.row]
+        
+        cell.lemmaLabel.text = "\(entry.navi):"
+        cell.ipaLabel.text = "[ \(entry.ipa) ]"
+        //let partOfSpeech = entry.partOfSpeech.replacingOccurrences(of: "^", with: "")
+        //cell.posLabel.text = partOfSpeech
+        cell.posLabel.text = entry.fancyPartOfSpeech
+        cell.definitionLabel.text = entry.definition
         return cell
     }
-    */
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -99,18 +106,17 @@ class DictionaryTableViewController: UITableViewController {
     */
     
     private func loadEntries() {
-        dictionary.fetchEntries()
-        
+        entries = dictionary.fetchEntries()
     }
 
     
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
+    }*/
 
 }

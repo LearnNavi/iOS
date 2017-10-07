@@ -12,8 +12,16 @@ class VersionTable: SQLTable<Version> {
     
     typealias Model = Version
     
+    let version = Expression<Int>("version")
+    let date = Expression<String>("date")
+    let dictionaryDate = Expression<String>("dictionaryDate")
+    
     init(_ db: Connection){
         super.init(db, table: Table("version"))
+    }
+    
+    func getVersion() throws -> Int! {
+        return try db.scalar(table.select(version.max))
     }
     
 }

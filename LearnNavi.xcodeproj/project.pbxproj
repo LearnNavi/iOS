@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		090C87B31F8049EA00980610 /* LNButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090C87B21F8049EA00980610 /* LNButton.swift */; };
+		091F35541F872DBB0094B60B /* database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 09E6A1EF1F831C1700D93133 /* database.sqlite */; };
+		091F35561F8735560094B60B /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F35551F8735560094B60B /* Schema.swift */; };
+		091F35691F885BD80094B60B /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F35681F885BD80094B60B /* Version.swift */; };
+		091F356B1F8863EB0094B60B /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F356A1F8863EB0094B60B /* SQLTable.swift */; };
+		091F356D1F886D710094B60B /* Changelog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F356C1F886D710094B60B /* Changelog.swift */; };
+		091F356F1F886D8A0094B60B /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F356E1F886D8A0094B60B /* Entry.swift */; };
+		091F35711F886DA70094B60B /* LocalizedWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F35701F886DA70094B60B /* LocalizedWord.swift */; };
+		091F35731F886DD90094B60B /* MetaWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F35721F886DD90094B60B /* MetaWord.swift */; };
 		092BEC7C1F7F4D69005A2918 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092BEC7B1F7F4D69005A2918 /* AboutViewController.swift */; };
 		092BEC7F1F7F607B005A2918 /* DictionaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092BEC7E1F7F607B005A2918 /* DictionaryTableViewController.swift */; };
 		092BEC811F7FE838005A2918 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 092BEC801F7FE838005A2918 /* LaunchScreen.storyboard */; };
@@ -20,7 +28,6 @@
 		099F720A1F8132160038261B /* LNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F72091F8132160038261B /* LNViewController.swift */; };
 		099F720C1F8136B60038261B /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F720B1F8136B60038261B /* DictionaryViewController.swift */; };
 		099F720E1F8139760038261B /* LNConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 099F720D1F8139760038261B /* LNConfig.plist */; };
-		099F72101F8147750038261B /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F720F1F8147750038261B /* Entry.swift */; };
 		099F723A1F8150390038261B /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099F72391F8150380038261B /* SQLite.framework */; };
 		099F723B1F8150390038261B /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 099F72391F8150380038261B /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		09E6A1EA1F81515300D93133 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E6A1E91F81515300D93133 /* Dictionary.swift */; };
@@ -59,6 +66,26 @@
 
 /* Begin PBXFileReference section */
 		090C87B21F8049EA00980610 /* LNButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNButton.swift; sourceTree = "<group>"; };
+		091F35461F8460360094B60B /* de.xliff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = de.xliff; sourceTree = "<group>"; };
+		091F35471F8460360094B60B /* en.xliff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = en.xliff; sourceTree = "<group>"; };
+		091F35481F8460360094B60B /* et.xliff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = et.xliff; sourceTree = "<group>"; };
+		091F35491F8460360094B60B /* fr.xliff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fr.xliff; sourceTree = "<group>"; };
+		091F354A1F8460360094B60B /* hu.xliff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = hu.xliff; sourceTree = "<group>"; };
+		091F354B1F8460360094B60B /* nl.xliff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = nl.xliff; sourceTree = "<group>"; };
+		091F354C1F8460360094B60B /* pl.xliff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = pl.xliff; sourceTree = "<group>"; };
+		091F35551F8735560094B60B /* Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schema.swift; sourceTree = "<group>"; };
+		091F35591F88533F0094B60B /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
+		091F355B1F8853B50094B60B /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
+		091F355D1F8855810094B60B /* SharkORM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SharkORM.framework; path = Carthage/Build/iOS/SharkORM.framework; sourceTree = "<group>"; };
+		091F355E1F8855810094B60B /* SharkORM.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SharkORM.framework.dSYM; path = Carthage/Build/iOS/SharkORM.framework.dSYM; sourceTree = "<group>"; };
+		091F35611F8855900094B60B /* SQLite.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SQLite.framework.dSYM; path = Carthage/Build/iOS/SQLite.framework.dSYM; sourceTree = "<group>"; };
+		091F35631F8855B00094B60B /* SharkORM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SharkORM.framework; path = Carthage/Build/iOS/SharkORM.framework; sourceTree = "<group>"; };
+		091F35681F885BD80094B60B /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		091F356A1F8863EB0094B60B /* SQLTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLTable.swift; sourceTree = "<group>"; };
+		091F356C1F886D710094B60B /* Changelog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Changelog.swift; sourceTree = "<group>"; };
+		091F356E1F886D8A0094B60B /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		091F35701F886DA70094B60B /* LocalizedWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedWord.swift; sourceTree = "<group>"; };
+		091F35721F886DD90094B60B /* MetaWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaWord.swift; sourceTree = "<group>"; };
 		092BEC7B1F7F4D69005A2918 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		092BEC7E1F7F607B005A2918 /* DictionaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTableViewController.swift; sourceTree = "<group>"; };
 		092BEC801F7FE838005A2918 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,7 +104,6 @@
 		099F72091F8132160038261B /* LNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNViewController.swift; sourceTree = "<group>"; };
 		099F720B1F8136B60038261B /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		099F720D1F8139760038261B /* LNConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LNConfig.plist; sourceTree = "<group>"; };
-		099F720F1F8147750038261B /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		099F722D1F814C380038261B /* project.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; name = project.xcworkspace; path = LearnNavi.xcodeproj/project.xcworkspace; sourceTree = "<group>"; };
 		099F72371F8150300038261B /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
 		099F72391F8150380038261B /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
@@ -111,9 +137,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		091F35451F8460360094B60B /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				091F35461F8460360094B60B /* de.xliff */,
+				091F35471F8460360094B60B /* en.xliff */,
+				091F35481F8460360094B60B /* et.xliff */,
+				091F35491F8460360094B60B /* fr.xliff */,
+				091F354A1F8460360094B60B /* hu.xliff */,
+				091F354B1F8460360094B60B /* nl.xliff */,
+				091F354C1F8460360094B60B /* pl.xliff */,
+			);
+			path = Localizations;
+			sourceTree = "<group>";
+		};
+		091F35671F885BB10094B60B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				09E6A1E91F81515300D93133 /* Dictionary.swift */,
+				091F35551F8735560094B60B /* Schema.swift */,
+				091F356A1F8863EB0094B60B /* SQLTable.swift */,
+				091F35681F885BD80094B60B /* Version.swift */,
+				091F356C1F886D710094B60B /* Changelog.swift */,
+				091F356E1F886D8A0094B60B /* Entry.swift */,
+				091F35701F886DA70094B60B /* LocalizedWord.swift */,
+				091F35721F886DD90094B60B /* MetaWord.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		098913341F7F3A64006D337D = {
 			isa = PBXGroup;
 			children = (
+				091F35631F8855B00094B60B /* SharkORM.framework */,
+				091F355B1F8853B50094B60B /* Cartfile.resolved */,
+				091F35591F88533F0094B60B /* Cartfile */,
+				091F35451F8460360094B60B /* Localizations */,
 				099F72391F8150380038261B /* SQLite.framework */,
 				0989133F1F7F3A64006D337D /* LearnNavi */,
 				098913541F7F3A64006D337D /* LearnNaviTests */,
@@ -136,6 +195,7 @@
 		0989133F1F7F3A64006D337D /* LearnNavi */ = {
 			isa = PBXGroup;
 			children = (
+				091F35671F885BB10094B60B /* Models */,
 				09E6A1EF1F831C1700D93133 /* database.sqlite */,
 				092BEC7B1F7F4D69005A2918 /* AboutViewController.swift */,
 				098913401F7F3A64006D337D /* AppDelegate.swift */,
@@ -149,8 +209,6 @@
 				099F72091F8132160038261B /* LNViewController.swift */,
 				098913441F7F3A64006D337D /* Main.storyboard */,
 				099F720D1F8139760038261B /* LNConfig.plist */,
-				099F720F1F8147750038261B /* Entry.swift */,
-				09E6A1E91F81515300D93133 /* Dictionary.swift */,
 			);
 			path = LearnNavi;
 			sourceTree = "<group>";
@@ -176,6 +234,9 @@
 		099F722C1F814C370038261B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				091F35611F8855900094B60B /* SQLite.framework.dSYM */,
+				091F355D1F8855810094B60B /* SharkORM.framework */,
+				091F355E1F8855810094B60B /* SharkORM.framework.dSYM */,
 				099F72371F8150300038261B /* SQLite.framework */,
 				099F722D1F814C380038261B /* project.xcworkspace */,
 			);
@@ -294,6 +355,7 @@
 			files = (
 				099F720E1F8139760038261B /* LNConfig.plist in Resources */,
 				098913481F7F3A64006D337D /* Assets.xcassets in Resources */,
+				091F35541F872DBB0094B60B /* database.sqlite in Resources */,
 				092BEC811F7FE838005A2918 /* LaunchScreen.storyboard in Resources */,
 				098913461F7F3A64006D337D /* Main.storyboard in Resources */,
 			);
@@ -338,7 +400,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SQLite.framework",
 			);
 			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SQLite.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -353,13 +414,19 @@
 			files = (
 				099F720C1F8136B60038261B /* DictionaryViewController.swift in Sources */,
 				099F720A1F8132160038261B /* LNViewController.swift in Sources */,
+				091F35731F886DD90094B60B /* MetaWord.swift in Sources */,
+				091F356F1F886D8A0094B60B /* Entry.swift in Sources */,
+				091F356D1F886D710094B60B /* Changelog.swift in Sources */,
 				092BEC7F1F7F607B005A2918 /* DictionaryTableViewController.swift in Sources */,
-				099F72101F8147750038261B /* Entry.swift in Sources */,
+				091F35561F8735560094B60B /* Schema.swift in Sources */,
+				091F356B1F8863EB0094B60B /* SQLTable.swift in Sources */,
 				090C87B31F8049EA00980610 /* LNButton.swift in Sources */,
 				09E6A1EA1F81515300D93133 /* Dictionary.swift in Sources */,
 				099F72081F8085330038261B /* Config.swift in Sources */,
 				092BEC7C1F7F4D69005A2918 /* AboutViewController.swift in Sources */,
+				091F35711F886DA70094B60B /* LocalizedWord.swift in Sources */,
 				098913411F7F3A64006D337D /* AppDelegate.swift in Sources */,
+				091F35691F885BD80094B60B /* Version.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +601,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -559,6 +627,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

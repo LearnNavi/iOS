@@ -10,6 +10,10 @@ import UIKit
 
 class DictionaryTableViewController: UITableViewController {
 
+    // MARK: Properties
+    var dictionary : Dictionary!
+    var entries = [Entry]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +25,10 @@ class DictionaryTableViewController: UITableViewController {
         let imageView = UIImageView(image: backgroundImage)
         self.tableView.backgroundView = imageView
         
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        dictionary = appDelegate.bundledDictionary
+        
+        loadEntries()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -89,6 +97,11 @@ class DictionaryTableViewController: UITableViewController {
         return true
     }
     */
+    
+    private func loadEntries() {
+        dictionary.fetchEntries()
+        
+    }
 
     
     // MARK: - Navigation

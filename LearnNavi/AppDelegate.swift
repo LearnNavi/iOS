@@ -12,10 +12,27 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    let databaseFilename = "database.sqlite"
+    let documentsUrl: URL
+    let bundledDictionaryUrl : URL
+    let bundledDictionary : Dictionary
+    var dictionary : Dictionary!
+    
+    override init() {
+        documentsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        bundledDictionaryUrl = Bundle.main.resourceURL!.appendingPathComponent(databaseFilename)
+        bundledDictionary = Dictionary(path: bundledDictionaryUrl)
+        // Call parent init...
+        super.init()
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //let version = bundledDictionary.version!
+        //print("Database version: \(version)")
+        
         return true
     }
 
@@ -39,6 +56,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func copyDatabaseIfNeeded() {
+        // Move database file from bundle to documents folder
+        /*
+        if !( (try? dbUrl.checkResourceIsReachable()) ?? false) {
+            print("DB does not exist in documents folder")
+            
+            let bundledDbUrl = Bundle.main.resourceURL?.appendingPathComponent(databaseFile)
+            
+            do {
+                try FileManager.default.copyItem(atPath: (bundledDbUrl?.path)!, toPath: dbUrl.path)
+                print("Database file copied!! \(dbUrl.path)")
+            } catch let error as NSError {
+                print("Couldn't copy file to final location! Error:\(error.description)")
+            }
+            
+        } else {
+            print("Database file found at path: \(dbUrl.path)")
+        }
+        */
     }
 
 

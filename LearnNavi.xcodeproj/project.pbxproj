@@ -19,6 +19,7 @@
 		092BEC7C1F7F4D69005A2918 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092BEC7B1F7F4D69005A2918 /* AboutViewController.swift */; };
 		092BEC7F1F7F607B005A2918 /* DictionaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092BEC7E1F7F607B005A2918 /* DictionaryTableViewController.swift */; };
 		092BEC811F7FE838005A2918 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 092BEC801F7FE838005A2918 /* LaunchScreen.storyboard */; };
+		095E5CD31F8BE63B0041EDF5 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099F72371F8150300038261B /* SQLite.framework */; };
 		098913411F7F3A64006D337D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098913401F7F3A64006D337D /* AppDelegate.swift */; };
 		098913461F7F3A64006D337D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 098913441F7F3A64006D337D /* Main.storyboard */; };
 		098913481F7F3A64006D337D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 098913471F7F3A64006D337D /* Assets.xcassets */; };
@@ -28,8 +29,6 @@
 		099F720A1F8132160038261B /* LNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F72091F8132160038261B /* LNViewController.swift */; };
 		099F720C1F8136B60038261B /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F720B1F8136B60038261B /* DictionaryViewController.swift */; };
 		099F720E1F8139760038261B /* LNConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 099F720D1F8139760038261B /* LNConfig.plist */; };
-		099F723A1F8150390038261B /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099F72391F8150380038261B /* SQLite.framework */; };
-		099F723B1F8150390038261B /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 099F72391F8150380038261B /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		09E6A1EA1F81515300D93133 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E6A1E91F81515300D93133 /* Dictionary.swift */; };
 		09F14AB01F8942920080BD15 /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F14AAF1F8942920080BD15 /* EntryTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -50,20 +49,6 @@
 			remoteInfo = LearnNavi;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		099F72321F814C550038261B /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				099F723B1F8150390038261B /* SQLite.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		090C87B21F8049EA00980610 /* LNButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNButton.swift; sourceTree = "<group>"; };
@@ -89,6 +74,7 @@
 		092BEC7B1F7F4D69005A2918 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		092BEC7E1F7F607B005A2918 /* DictionaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTableViewController.swift; sourceTree = "<group>"; };
 		092BEC801F7FE838005A2918 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		095E5CCC1F8BDF2C0041EDF5 /* LearnNavi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LearnNavi.entitlements; sourceTree = "<group>"; };
 		0989133D1F7F3A64006D337D /* LearnNavi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnNavi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		098913401F7F3A64006D337D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		098913451F7F3A64006D337D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,7 +92,6 @@
 		099F720D1F8139760038261B /* LNConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LNConfig.plist; sourceTree = "<group>"; };
 		099F722D1F814C380038261B /* project.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; name = project.xcworkspace; path = LearnNavi.xcodeproj/project.xcworkspace; sourceTree = "<group>"; };
 		099F72371F8150300038261B /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
-		099F72391F8150380038261B /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
 		09E6A1E91F81515300D93133 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		09E6A1EF1F831C1700D93133 /* database.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = database.sqlite; sourceTree = "<group>"; };
 		09F14AAF1F8942920080BD15 /* EntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
@@ -117,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				099F723A1F8150390038261B /* SQLite.framework in Frameworks */,
+				095E5CD31F8BE63B0041EDF5 /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,7 +158,6 @@
 				091F355B1F8853B50094B60B /* Cartfile.resolved */,
 				091F35591F88533F0094B60B /* Cartfile */,
 				091F35451F8460360094B60B /* Localizations */,
-				099F72391F8150380038261B /* SQLite.framework */,
 				0989133F1F7F3A64006D337D /* LearnNavi */,
 				098913541F7F3A64006D337D /* LearnNaviTests */,
 				0989135F1F7F3A64006D337D /* LearnNaviUITests */,
@@ -195,6 +179,7 @@
 		0989133F1F7F3A64006D337D /* LearnNavi */ = {
 			isa = PBXGroup;
 			children = (
+				095E5CCC1F8BDF2C0041EDF5 /* LearnNavi.entitlements */,
 				091F35671F885BB10094B60B /* Models */,
 				09E6A1EF1F831C1700D93133 /* database.sqlite */,
 				092BEC7B1F7F4D69005A2918 /* AboutViewController.swift */,
@@ -256,7 +241,6 @@
 				0989133B1F7F3A64006D337D /* Resources */,
 				099F72051F8077620038261B /* ShellScript */,
 				099F72361F814F430038261B /* ShellScript */,
-				099F72321F814C550038261B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -316,6 +300,11 @@
 					0989133C1F7F3A64006D337D = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 					098913501F7F3A64006D337D = {
 						CreatedOnToolsVersion = 9.0;
@@ -591,6 +580,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 5X7KP44M4V;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

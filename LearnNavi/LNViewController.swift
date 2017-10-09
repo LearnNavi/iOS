@@ -8,15 +8,15 @@
 
 import UIKit
 
-class LNViewController: UIViewController {
+class LNViewController: UIViewController, UINavigationControllerDelegate {
 
     // MARK: - Outlets
     @IBOutlet weak var backButton: LNButton?
     
     // MARK: - Actions
     @IBAction func unwindSeque(_ seque: UIStoryboardSegue) {
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-        self.navigationController?.setToolbarHidden(true, animated: false)
+        //self.navigationController?.setNavigationBarHidden(true, animated: false)
+        //self.navigationController?.setToolbarHidden(true, animated: false)
     }
     
     @IBAction func openLearnNaviWebSite(_ sender: UIButton) {
@@ -41,7 +41,7 @@ class LNViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //self.navigationController?.delegate = self
         // Configure the back button
         configureBackButton()
     }
@@ -58,14 +58,14 @@ class LNViewController: UIViewController {
         }
     }
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
     }
-    */
+    
 
 }

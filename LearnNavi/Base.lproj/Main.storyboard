@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8la-H2-2aa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -39,7 +39,7 @@
                                         <accessibility key="accessibilityConfiguration" label="Dictionary"/>
                                         <state key="normal" title="Dictionary" backgroundImage="Button_Gray"/>
                                         <connections>
-                                            <segue destination="X00-GG-CQw" kind="presentation" modalTransitionStyle="flipHorizontal" id="p2W-pn-2re"/>
+                                            <segue destination="X00-GG-CQw" kind="presentation" modalTransitionStyle="flipHorizontal" id="Ld4-5F-WEA"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbd-Ud-n1E" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
@@ -83,7 +83,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UU5-qt-YNx" id="cZ6-tc-lls">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="59.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lemma:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mt6-ZA-uJb">
@@ -142,7 +142,7 @@
                     <navigationItem key="navigationItem" id="F6t-Y0-eo4">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="1Y0-PH-9ND">
                             <connections>
-                                <segue destination="V0F-T2-9w1" kind="unwind" unwindAction="unwindSeque:" id="xPM-42-HlZ"/>
+                                <segue destination="V0F-T2-9w1" kind="unwind" unwindAction="unwindSeque:" id="lE8-Ax-X6Z"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -152,28 +152,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="524-a6-0Z6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="V0F-T2-9w1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3285.507246376812" y="-296.73913043478262"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="bH0-Ch-s6E">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="8la-H2-2aa" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="B1S-ht-UEX">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="8Xk-ou-y0I">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="976-Gc-Ik5"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Y8C-fN-e5o" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="116.8" y="476.76161919040482"/>
+            <point key="canvasLocation" x="4110" y="-298"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bTB-hq-ELc">
@@ -355,7 +334,7 @@
                                         <accessibility key="accessibilityConfiguration" label="About"/>
                                         <state key="normal" title="Entries" backgroundImage="Button_Gray"/>
                                         <connections>
-                                            <segue destination="hqH-ba-4JE" kind="show" id="SYh-Si-EFQ"/>
+                                            <segue destination="hE0-PP-WFW" kind="presentation" modalTransitionStyle="crossDissolve" id="aDQ-ne-YAh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgu-33-7Jt" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
@@ -409,6 +388,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cQJ-rq-llr"/>
                     </view>
+                    <navigationItem key="navigationItem" id="NrB-i8-AU1"/>
                     <connections>
                         <outlet property="backButton" destination="a8a-GZ-4z3" id="026-pL-tax"/>
                     </connections>
@@ -481,6 +461,30 @@
                 <exit id="Drm-Bp-oCY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3286" y="1215"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TUJ-UJ-QlH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="hE0-PP-WFW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="PgT-db-Rwq">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="kW2-5W-Ieh">
+                        <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="hqH-ba-4JE" kind="relationship" relationship="rootViewController" id="EYw-iG-qdl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H7U-9U-iRC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3285.507246376812" y="-297.554347826087"/>
         </scene>
     </scenes>
     <resources>

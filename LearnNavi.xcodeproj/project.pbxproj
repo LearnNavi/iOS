@@ -80,7 +80,6 @@
 		091F355D1F8855810094B60B /* SharkORM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SharkORM.framework; path = Carthage/Build/iOS/SharkORM.framework; sourceTree = "<group>"; };
 		091F355E1F8855810094B60B /* SharkORM.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SharkORM.framework.dSYM; path = Carthage/Build/iOS/SharkORM.framework.dSYM; sourceTree = "<group>"; };
 		091F35611F8855900094B60B /* SQLite.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SQLite.framework.dSYM; path = Carthage/Build/iOS/SQLite.framework.dSYM; sourceTree = "<group>"; };
-		091F35631F8855B00094B60B /* SharkORM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SharkORM.framework; path = Carthage/Build/iOS/SharkORM.framework; sourceTree = "<group>"; };
 		091F35681F885BD80094B60B /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 		091F356A1F8863EB0094B60B /* SQLTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLTable.swift; sourceTree = "<group>"; };
 		091F356C1F886D710094B60B /* Changelog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Changelog.swift; sourceTree = "<group>"; };
@@ -171,7 +170,6 @@
 		098913341F7F3A64006D337D = {
 			isa = PBXGroup;
 			children = (
-				091F35631F8855B00094B60B /* SharkORM.framework */,
 				091F355B1F8853B50094B60B /* Cartfile.resolved */,
 				091F35591F88533F0094B60B /* Cartfile */,
 				091F35451F8460360094B60B /* Localizations */,

@@ -57,9 +57,9 @@ class DictionaryTableViewController: UITableViewController {
 
         // Fetches the appropriate meal for the data source layout.
         let entry = entries[indexPath.row]
-        
+        let ipa = entry.ipa.utf8
         cell.lemmaLabel.text = "\(entry.navi):"
-        cell.ipaLabel.text = "[ \(entry.ipa) ]"
+        cell.ipaLabel.text = "[ \(ipa) ]"
         //let partOfSpeech = entry.partOfSpeech.replacingOccurrences(of: "^", with: "")
         //cell.posLabel.text = partOfSpeech
         cell.posLabel.text = entry.fancyPartOfSpeech

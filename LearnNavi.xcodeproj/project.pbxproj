@@ -20,6 +20,8 @@
 		092BEC7F1F7F607B005A2918 /* DictionaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092BEC7E1F7F607B005A2918 /* DictionaryTableViewController.swift */; };
 		092BEC811F7FE838005A2918 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 092BEC801F7FE838005A2918 /* LaunchScreen.storyboard */; };
 		095E5CD31F8BE63B0041EDF5 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099F72371F8150300038261B /* SQLite.framework */; };
+		095E5CD71F8BF4930041EDF5 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095E5CD51F8BF4850041EDF5 /* Fabric.framework */; };
+		095E5CD81F8BF4970041EDF5 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095E5CD61F8BF4850041EDF5 /* Crashlytics.framework */; };
 		098913411F7F3A64006D337D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098913401F7F3A64006D337D /* AppDelegate.swift */; };
 		098913461F7F3A64006D337D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 098913441F7F3A64006D337D /* Main.storyboard */; };
 		098913481F7F3A64006D337D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 098913471F7F3A64006D337D /* Assets.xcassets */; };
@@ -75,6 +77,8 @@
 		092BEC7E1F7F607B005A2918 /* DictionaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTableViewController.swift; sourceTree = "<group>"; };
 		092BEC801F7FE838005A2918 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		095E5CCC1F8BDF2C0041EDF5 /* LearnNavi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LearnNavi.entitlements; sourceTree = "<group>"; };
+		095E5CD51F8BF4850041EDF5 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		095E5CD61F8BF4850041EDF5 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		0989133D1F7F3A64006D337D /* LearnNavi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnNavi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		098913401F7F3A64006D337D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		098913451F7F3A64006D337D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				095E5CD31F8BE63B0041EDF5 /* SQLite.framework in Frameworks */,
+				095E5CD71F8BF4930041EDF5 /* Fabric.framework in Frameworks */,
+				095E5CD81F8BF4970041EDF5 /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +161,8 @@
 		098913341F7F3A64006D337D = {
 			isa = PBXGroup;
 			children = (
+				095E5CD61F8BF4850041EDF5 /* Crashlytics.framework */,
+				095E5CD51F8BF4850041EDF5 /* Fabric.framework */,
 				091F355B1F8853B50094B60B /* Cartfile.resolved */,
 				091F35591F88533F0094B60B /* Cartfile */,
 				091F35451F8460360094B60B /* Localizations */,
@@ -241,6 +249,7 @@
 				0989133B1F7F3A64006D337D /* Resources */,
 				099F72051F8077620038261B /* ShellScript */,
 				099F72361F814F430038261B /* ShellScript */,
+				095E5CD41F8BF4560041EDF5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -368,6 +377,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		095E5CD41F8BF4560041EDF5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run c5ace68db7e94365d33132ea27cb07abc73733fe 0a8dc66bde2b20a5fd1612d603060a10cb81587902b3709c8f5543b4cae3b34c";
+		};
 		099F72051F8077620038261B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 12;
@@ -585,6 +607,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = LearnNavi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -611,6 +634,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = LearnNavi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

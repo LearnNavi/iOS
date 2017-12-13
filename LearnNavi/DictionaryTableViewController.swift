@@ -21,8 +21,17 @@ class DictionaryTableViewController: UITableViewController {
         // Add a background view to the table view
         let backgroundImage = UIImage(named: "Background-Resources")
         let imageView = UIImageView(image: backgroundImage)
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        //blurView.alpha = 0.8
+        blurView.frame = imageView.bounds
+        imageView.addSubview(blurView)
+        imageView.alpha = 0.6
         self.tableView.backgroundView = imageView
+        self.tableView.backgroundColor = UIColor.black
         
+        self.tableView.sectionIndexColor = UIColor.orange //UIColor(red: 120/255, green: 0.0, blue: 240/255, alpha: 1)
+        //self.tableView.sectionIndexTrackingBackgroundColor
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         dictionary = appDelegate.bundledDictionary
         
@@ -51,11 +60,17 @@ class DictionaryTableViewController: UITableViewController {
         return sections[section].entries.count
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath)
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "EntryTableViewCell"
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? EntryTableViewCell else {
             fatalError("The dequeued cell is not an instance of EntryTableViewCell")
         }
+        
+        cell.backgroundColor = .clear
 
         let entry = sections[indexPath.section].entries[indexPath.row]
         
@@ -76,6 +91,13 @@ class DictionaryTableViewController: UITableViewController {
         return sections.map { section in
             return section.alpha
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.75)
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor.green
+        header.textLabel?.font = UIFont.init(name: "Papyrus", size: 18.5)
     }
     
     /*
@@ -125,7 +147,15 @@ class DictionaryTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "showDictionaryEntry" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let entry = sections[indexPath.section].entries[indexPath.row]
+                let controller = segue.destination as! DictionaryViewController
+                controller.entry = entry
+                //controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+                //controller.navigationItem.leftItemsSupplementBackButton = true
+            }
+        }
     }
 
 }

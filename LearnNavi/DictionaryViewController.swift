@@ -8,12 +8,36 @@
 
 import UIKit
 
-class DictionaryViewController: LNViewController {
+class DictionaryViewController: UIViewController {
 
+    // MARK: - Outlets
+    @IBOutlet weak var imageView: UIImageView?
+    @IBOutlet weak var lemmaLabel: UILabel?
+    @IBOutlet weak var ipaLabel: UILabel?
+    @IBOutlet weak var partOfSpeechLabel: UILabel?
+    @IBOutlet weak var definitionLabel: UILabel?
+    
+    var entry: Entry?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        // Add a background view to the table view
 
-        // Do any additional setup after loading the view.
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        //blurView.alpha = 0.8
+        blurView.frame = imageView!.bounds
+        imageView!.addSubview(blurView)
+        //self.view?.addSubview(imageView!)
+        
+        if let entry = entry {
+            lemmaLabel?.text = entry.navi
+            ipaLabel?.text = "[ \(entry.ipa.utf8) ]"
+            partOfSpeechLabel?.text = entry.fancyPartOfSpeech
+            definitionLabel?.text = entry.definition
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

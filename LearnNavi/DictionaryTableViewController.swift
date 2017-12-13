@@ -13,6 +13,7 @@ class DictionaryTableViewController: UITableViewController {
     // MARK: Properties
     var dictionary : Dictionary!
     var entries = [Entry]()
+    var sections = [Section]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,7 @@ class DictionaryTableViewController: UITableViewController {
         dictionary = appDelegate.bundledDictionary
         
         loadEntries()
+        loadSections()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -41,12 +43,12 @@ class DictionaryTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return sections.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return entries.count
+        return sections[section].entries.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,16 +57,25 @@ class DictionaryTableViewController: UITableViewController {
             fatalError("The dequeued cell is not an instance of EntryTableViewCell")
         }
 
-        // Fetches the appropriate meal for the data source layout.
-        let entry = entries[indexPath.row]
-        let ipa = entry.ipa.utf8
+        let entry = sections[indexPath.section].entries[indexPath.row]
+        
         cell.lemmaLabel.text = "\(entry.navi):"
-        cell.ipaLabel.text = "[ \(ipa) ]"
+        cell.ipaLabel.text = "[ \(entry.ipa.utf8) ]"
         //let partOfSpeech = entry.partOfSpeech.replacingOccurrences(of: "^", with: "")
         //cell.posLabel.text = partOfSpeech
         cell.posLabel.text = entry.fancyPartOfSpeech
         cell.definitionLabel.text = entry.definition
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sections[section].alpha
+    }
+    
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return sections.map { section in
+            return section.alpha
+        }
     }
     
     /*
@@ -103,7 +114,11 @@ class DictionaryTableViewController: UITableViewController {
     */
     
     private func loadEntries() {
-        entries = dictionary.fetchEntries()
+        entries = dictionary.getEntries()
+    }
+    
+    private func loadSections() {
+        sections = dictionary.getSections()
     }
 
     // MARK: - Navigation

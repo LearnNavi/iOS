@@ -26,8 +26,12 @@ class Dictionary {
         getVersion()
     }
     
-    public func fetchEntries() -> [Entry] {
+    public func getEntries() -> [Entry] {
         return schema.entry.selectAll()
+    }
+    
+    public func getSections() -> [Section] {
+        return schema.entry.getSections()
     }
     
     func getVersion() {

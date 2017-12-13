@@ -19,9 +19,21 @@ class SQLTable<Model : Codable> {
         self.table = table
     }
     
-    public func selectAll() -> [Model]{
+    public func selectAll() -> [Model] {
         do {
             let items: [Model] = try db.prepare(table).map { row in
+                return try row.decode()
+            }
+            return items
+            
+        } catch {
+            return []
+        }
+    }
+    
+    public func select(_ whereClause: Expression<Bool>) -> [Model] {
+        do {
+            let items: [Model] = try db.prepare(table.where(whereClause)).map { row in
                 return try row.decode()
             }
             return items

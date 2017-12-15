@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		090C87B31F8049EA00980610 /* LNButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090C87B21F8049EA00980610 /* LNButton.swift */; };
-		091F35541F872DBB0094B60B /* database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 09E6A1EF1F831C1700D93133 /* database.sqlite */; };
 		091F35561F8735560094B60B /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F35551F8735560094B60B /* Schema.swift */; };
 		091F35691F885BD80094B60B /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F35681F885BD80094B60B /* Version.swift */; };
 		091F356B1F8863EB0094B60B /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F356A1F8863EB0094B60B /* SQLTable.swift */; };
@@ -23,6 +22,7 @@
 		095E5CD31F8BE63B0041EDF5 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099F72371F8150300038261B /* SQLite.framework */; };
 		095E5CD71F8BF4930041EDF5 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095E5CD51F8BF4850041EDF5 /* Fabric.framework */; };
 		095E5CD81F8BF4970041EDF5 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095E5CD61F8BF4850041EDF5 /* Crashlytics.framework */; };
+		096F9C4D1FE205B700990506 /* database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 096F9C4C1FE205B600990506 /* database.sqlite */; };
 		098913411F7F3A64006D337D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098913401F7F3A64006D337D /* AppDelegate.swift */; };
 		098913461F7F3A64006D337D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 098913441F7F3A64006D337D /* Main.storyboard */; };
 		098913481F7F3A64006D337D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 098913471F7F3A64006D337D /* Assets.xcassets */; };
@@ -81,6 +81,7 @@
 		095E5CCC1F8BDF2C0041EDF5 /* LearnNavi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LearnNavi.entitlements; sourceTree = "<group>"; };
 		095E5CD51F8BF4850041EDF5 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		095E5CD61F8BF4850041EDF5 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		096F9C4C1FE205B600990506 /* database.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = database.sqlite; sourceTree = "<group>"; };
 		0989133D1F7F3A64006D337D /* LearnNavi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnNavi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		098913401F7F3A64006D337D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		098913451F7F3A64006D337D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,7 +100,6 @@
 		099F722D1F814C380038261B /* project.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; name = project.xcworkspace; path = LearnNavi.xcodeproj/project.xcworkspace; sourceTree = "<group>"; };
 		099F72371F8150300038261B /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
 		09E6A1E91F81515300D93133 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
-		09E6A1EF1F831C1700D93133 /* database.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = database.sqlite; sourceTree = "<group>"; };
 		09F14AAF1F8942920080BD15 /* EntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,7 +192,7 @@
 			children = (
 				095E5CCC1F8BDF2C0041EDF5 /* LearnNavi.entitlements */,
 				091F35671F885BB10094B60B /* Models */,
-				09E6A1EF1F831C1700D93133 /* database.sqlite */,
+				096F9C4C1FE205B600990506 /* database.sqlite */,
 				092BEC7B1F7F4D69005A2918 /* AboutViewController.swift */,
 				098913401F7F3A64006D337D /* AppDelegate.swift */,
 				098913471F7F3A64006D337D /* Assets.xcassets */,
@@ -357,9 +357,9 @@
 			files = (
 				099F720E1F8139760038261B /* LNConfig.plist in Resources */,
 				098913481F7F3A64006D337D /* Assets.xcassets in Resources */,
-				091F35541F872DBB0094B60B /* database.sqlite in Resources */,
 				092BEC811F7FE838005A2918 /* LaunchScreen.storyboard in Resources */,
 				098913461F7F3A64006D337D /* Main.storyboard in Resources */,
+				096F9C4D1FE205B700990506 /* database.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

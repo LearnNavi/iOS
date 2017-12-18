@@ -32,8 +32,8 @@ class DictionaryTableViewController: UITableViewController {
         
         self.tableView.sectionIndexColor = UIColor.orange //UIColor(red: 120/255, green: 0.0, blue: 240/255, alpha: 1)
         //self.tableView.sectionIndexTrackingBackgroundColor
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        dictionary = appDelegate.bundledDictionary
+        //let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        dictionary = Dictionary.openDictionary()
         
         loadEntries()
         loadSections()

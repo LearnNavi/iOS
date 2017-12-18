@@ -12,6 +12,7 @@ final class Config {
     // Singleton instance
     static let sharedInstance = Config()
     
+    let documentsUrl: URL
     var mainConfig: NSDictionary!
     var envConfig: NSDictionary?
     let buildNumber: String
@@ -32,6 +33,8 @@ final class Config {
         versionNumber = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
         buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
         gitHash = Bundle.main.infoDictionary?["LNGitHash"] as! String
+        
+        documentsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first as URL!
     }
     
     open func fetchConfigItem(forKey aKey: Any) -> Any? {
@@ -62,8 +65,12 @@ final class Config {
         return fetchConfigItem(forKey: "LNDictionaryURL") as! String
     }
     
-    open func databaseFile() -> String {
-        return fetchConfigItem(forKey: "LNDatabaseFile") as! String
+    open func databaseFilename() -> String {
+        return fetchConfigItem(forKey: "LNDatabaseFilename") as! String
+    }
+    
+    open func databaseFileURL() -> URL {
+        return documentsUrl.appendingPathComponent(databaseFilename())
     }
     
     open func databaseVersionFile() -> String {

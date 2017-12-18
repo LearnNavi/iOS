@@ -39,6 +39,10 @@ class LNViewController: UIViewController, UINavigationControllerDelegate {
         }
     }
     
+    @IBAction func updateDictionary(_ sender: UIButton) {
+        Dictionary.downloadDictionary()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.navigationController?.delegate = self

@@ -12,10 +12,10 @@
 	<string>https://www.learnnavi.org</string>
 	<key>LNDictionaryURL</key>
 	<string>https://eanaeltu.learnnavi.org/dicts/NaviDictionary.pdf</string>
-	<key>LNDatabaseFile</key>
+	<key>LNDatabaseFilename</key>
 	<string>database.sqlite</string>
 	<key>LNDatabaseServerURL</key>
-	<string>https://files.learnnavi.org/mobile/</string>
+	<string>http://learnnaviapp.com/database/database.sqlite</string>
 	<key>LNDatabaseVersionFile</key>
 	<string>database.version</string>
 </dict>

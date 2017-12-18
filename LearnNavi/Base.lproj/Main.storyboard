@@ -433,7 +433,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSh-2I-cKR" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="130" width="334" height="50"/>
                                         <accessibility key="accessibilityConfiguration" label="Disclaimer"/>
-                                        <state key="normal" title="Check for Update" backgroundImage="Button_Gray"/>
+                                        <state key="normal" title="Update Dictionary" backgroundImage="Button_Gray"/>
+                                        <connections>
+                                            <action selector="updateDictionary:" destination="X00-GG-CQw" eventType="touchUpInside" id="v3Q-MD-zzS"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

@@ -25,10 +25,6 @@ class Dictionary {
         initVersion()
     }
     
-    deinit {
-        print("Running deinit")
-    }
-    
     static func initizalizeIfMissing(_ fileURL: URL) {
         if(!FileManager.default.fileExists(atPath: fileURL.path)) {
             initWithBundledDictionary(fileURL)
@@ -88,16 +84,44 @@ class Dictionary {
         }
     }
     
-    static func checkForUpdate() {
+    static func checkForUpdate(_ currentVersion: Int = 0, completion: ((_ updateAvailable: Bool) -> Void)? = nil) {
+        //Create URL to the source file you want to download
+        let fileURL = URL(string: Config.sharedInstance.versionURL())
         
+        let sessionConfig = URLSessionConfiguration.default
+        let session = URLSession(configuration: sessionConfig)
+        
+        let request = URLRequest(url:fileURL!)
+        
+        let task = session.dataTask(with: request) { (data, response, error) in
+            if let versionData = data, error == nil {
+                // Success
+                if let statusCode = (response as? HTTPURLResponse)?.statusCode {
+                    print("Successfully retieved version. Status code: \(statusCode)")
+                }
+                
+                if let stringData = String(data: versionData, encoding: String.Encoding.utf8) {
+                    if let version = Int(stringData.trimmingCharacters(in: .whitespacesAndNewlines)) {
+                        if( version > currentVersion ) {
+                            print("New Version Availabled: \(version)")
+                        } else {
+                            print("Dictionary already up to date")
+                        }
+                        completion?( version > currentVersion)
+                    }
+                }
+            } else {
+                print("Error took place while retrieving version. Error description: %@", error?.localizedDescription as Any);
+            }
+        }
+        task.resume()
     }
     
-    static func downloadDictionary() {
-
+    static func downloadDictionary(_ completion: ((_ updateSuccessful: Bool) -> Void)? = nil) {
         let destinationFileUrl = Config.sharedInstance.databaseFileURL()
         
         //Create URL to the source file you want to download
-        let fileURL = URL(string: Config.sharedInstance.databaseServerURL())
+        let fileURL = URL(string: Config.sharedInstance.databaseURL())
         
         let sessionConfig = URLSessionConfiguration.default
         let session = URLSession(configuration: sessionConfig)
@@ -114,18 +138,21 @@ class Dictionary {
                 do {
                     let dictionary = Dictionary(path: tempLocalUrl)
                     let version = dictionary.version!
+                    print("New Version \(version)")
                     if(version > 0) {
+                        // Version greater than 0 is just to make sure the dictionary isn't in a bad state, more complex integrety checking may be a good idea at some point
                         try FileManager.default.removeItem(at: destinationFileUrl)
                         try FileManager.default.copyItem(at: tempLocalUrl, to: destinationFileUrl)
+                        completion?(true)
                     }
-                    //let result = try FileManager.default.replaceItemAt(destinationFileUrl, withItemAt: tempLocalUrl)
-                    //print(result)
                 } catch (let writeError) {
                     print("Error creating a file \(destinationFileUrl) : \(writeError)")
+                    completion?(false)
                 }
                 
             } else {
                 print("Error took place while downloading a file. Error description: %@", error?.localizedDescription as Any);
+                completion?(false)
             }
         }
         task.resume()

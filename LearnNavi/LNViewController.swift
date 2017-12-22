@@ -40,7 +40,27 @@ class LNViewController: UIViewController, UINavigationControllerDelegate {
     }
     
     @IBAction func updateDictionary(_ sender: UIButton) {
-        Dictionary.downloadDictionary()
+        Dictionary.downloadDictionary() { ( updateSuccessful ) in
+            if( updateSuccessful ) {
+                // Show success
+                let alertSuccess = UIAlertController(title: "Dictionary Updated", message: "The dictionary was successfully updated!", preferredStyle: .alert)
+                let actionDismiss = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
+                alertSuccess.addAction(actionDismiss)
+                
+                DispatchQueue.main.async {
+                    self.present(alertSuccess, animated: true, completion: nil)
+                }
+            } else {
+                // Show failure
+                let alertFailure = UIAlertController(title: "Update Failed", message: "An error occurred while updating the dictionary!", preferredStyle: .alert)
+                let actionDismiss = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
+                alertFailure.addAction(actionDismiss)
+                
+                DispatchQueue.main.async {
+                    self.present(alertFailure, animated: true, completion: nil)
+                }
+            }
+        }
     }
     
     override func viewDidLoad() {

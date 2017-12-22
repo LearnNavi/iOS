@@ -73,12 +73,19 @@ final class Config {
         return documentsUrl.appendingPathComponent(databaseFilename())
     }
     
-    open func databaseVersionFile() -> String {
+    open func versionFilename() -> String {
         return fetchConfigItem(forKey: "LNDatabaseVersionFile") as! String
     }
     
-    open func databaseServerURL() -> String {
+    open func serverURL() -> String {
         return fetchConfigItem(forKey: "LNDatabaseServerURL") as! String
     }
     
+    open func databaseURL() -> String {
+        return serverURL() + databaseFilename()
+    }
+    
+    open func versionURL() -> String {
+        return serverURL() + versionFilename()
+    }
 }

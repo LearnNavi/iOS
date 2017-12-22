@@ -15,7 +15,7 @@
 	<key>LNDatabaseFilename</key>
 	<string>database.sqlite</string>
 	<key>LNDatabaseServerURL</key>
-	<string>http://learnnaviapp.com/database/database.sqlite</string>
+	<string>http://learnnaviapp.com/database/</string>
 	<key>LNDatabaseVersionFile</key>
 	<string>database.version</string>
 </dict>

@@ -28,9 +28,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Fabric.with([Crashlytics.self])
         let dictionary = Dictionary.openDictionary()
-        let version = dictionary.version!
-        print("Database version: \(version)")
-        Dictionary.downloadDictionary()
+        let currentVersion = dictionary.version!
+        print("Database version: \(currentVersion)")
+        Dictionary.checkForUpdate(currentVersion) { ( updateAvailable ) in
+            if (updateAvailable) {
+                let alert = UIAlertController(title: "Dictionary Update", message:
+                    "New updates are now available! Download them now?", preferredStyle: UIAlertControllerStyle.alert)
+                let actionYes = UIAlertAction(title: "Yes", style: .default, handler: { action in
+                    print("User wants updates!")
+                    Dictionary.downloadDictionary() { ( updateSuccessful ) in
+                        if( updateSuccessful ) {
+                            // Show success
+                            let alertSuccess = UIAlertController(title: "Dictionary Updated", message: "The dictionary was successfully updated!", preferredStyle: .alert)
+                            let actionDismiss = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
+                            alertSuccess.addAction(actionDismiss)
+                            
+                            DispatchQueue.main.async {
+                                self.window?.rootViewController?.present(alertSuccess, animated: true, completion: nil)
+                            }
+                        } else {
+                            // Show failure
+                            let alertFailure = UIAlertController(title: "Update Failed", message: "An error occurred while updating the dictionary!", preferredStyle: .alert)
+                            let actionDismiss = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
+                            alertFailure.addAction(actionDismiss)
+                            
+                            DispatchQueue.main.async {
+                                self.window?.rootViewController?.present(alertFailure, animated: true, completion: nil)
+                            }
+                        }
+                    }
+                })
+                
+                let actionCancel = UIAlertAction(title: "Cancel", style: .destructive, handler: { action in
+                    print("User cancelled update")
+                })
+                
+                alert.addAction(actionYes)
+                alert.addAction(actionCancel)
+                
+                DispatchQueue.main.async {
+                    self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+                }
+            }
+        }
         return true
     }
 

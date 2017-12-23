@@ -70,11 +70,11 @@
             </objects>
             <point key="canvasLocation" x="904.34782608695662" y="475.27173913043481"/>
         </scene>
-        <!--Dictionary Table View Controller-->
+        <!--Dictionary-->
         <scene sceneID="oiB-IS-T1s">
             <objects>
                 <tableViewController id="hqH-ba-4JE" customClass="DictionaryTableViewController" customModule="LearnNavi" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kcg-Pq-qPv">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="1" id="kcg-Pq-qPv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -139,10 +139,8 @@
                             <outlet property="delegate" destination="hqH-ba-4JE" id="8o2-zf-4Vn"/>
                         </connections>
                     </tableView>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="BfK-qt-Dby"/>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" id="F6t-Y0-eo4">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Dictionary" id="F6t-Y0-eo4">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="1Y0-PH-9ND">
                             <connections>
                                 <segue destination="V0F-T2-9w1" kind="unwind" unwindAction="unwindSeque:" id="lE8-Ax-X6Z"/>
@@ -150,7 +148,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="524-a6-0Z6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="V0F-T2-9w1" userLabel="Exit" sceneMemberID="exit"/>
@@ -169,7 +167,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ire-Aw-FUQ">
-                                <rect key="frame" x="0.0" y="64" width="414" height="628"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lemma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alE-Zd-hXD">
                                         <rect key="frame" x="20" y="50" width="374" height="46"/>
@@ -226,7 +224,7 @@
                         <viewLayoutGuide key="safeArea" id="m4e-FL-jv4"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="definitionLabel" destination="GIQ-0B-0Pk" id="dRq-jP-vtR"/>
                         <outlet property="imageView" destination="ABb-9f-81g" id="sek-gU-5Sb"/>
@@ -553,10 +551,10 @@
         <!--Navigation Controller-->
         <scene sceneID="TUJ-UJ-QlH">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="hE0-PP-WFW" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hE0-PP-WFW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="PgT-db-Rwq">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -564,7 +562,6 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="kW2-5W-Ieh">
-                        <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>

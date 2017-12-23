@@ -8,12 +8,16 @@
 
 import UIKit
 
-class DictionaryTableViewController: UITableViewController {
+class DictionaryTableViewController: UITableViewController, UISearchResultsUpdating {
 
     // MARK: Properties
     var dictionary : Dictionary!
-    var entries = [Entry]()
+    //var entries = [Entry]()
     var sections = [Section]()
+    var filteredEntries = [Entry]()
+    var filteredSections = [Section]()
+    
+    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +27,17 @@ class DictionaryTableViewController: UITableViewController {
         let imageView = UIImageView(image: backgroundImage)
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
         let blurView = UIVisualEffectView(effect: blurEffect)
+        
         //blurView.alpha = 0.8
         blurView.frame = imageView.bounds
+        
+        //blurView.translatesAutoresizingMaskIntoConstraints = false
+        //blurView.topAnchor.constraint(equalToConstant: 0).isActive = true
+        //blurView.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
+        //blurView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        //blurView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        imageView.autoresizesSubviews = true
+        blurView.autoresizingMask = [UIViewAutoresizing.flexibleHeight, UIViewAutoresizing.flexibleWidth]
         imageView.addSubview(blurView)
         imageView.alpha = 0.6
         self.tableView.backgroundView = imageView
@@ -35,8 +48,20 @@ class DictionaryTableViewController: UITableViewController {
         //let appDelegate = UIApplication.shared.delegate as! AppDelegate
         dictionary = Dictionary.openDictionary()
         
-        loadEntries()
+        //loadEntries()
         loadSections()
+        
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Dictionary"
+        definesPresentationContext = true
+        
+        if #available(iOS 11.0, *) {
+            navigationItem.searchController = searchController
+        } else {
+            tableView.tableHeaderView = searchController.searchBar
+        }
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -52,12 +77,20 @@ class DictionaryTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
+        if isFiltering() {
+            return filteredSections.count
+        } else {
+            return sections.count
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return sections[section].entries.count
+        if isFiltering() {
+            return filteredSections[section].entries.count
+        } else {
+            return sections[section].entries.count
+        }
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -72,7 +105,13 @@ class DictionaryTableViewController: UITableViewController {
         
         cell.backgroundColor = .clear
 
-        let entry = sections[indexPath.section].entries[indexPath.row]
+        let entry: Entry
+        
+        if isFiltering() {
+            entry = filteredSections[indexPath.section].entries[indexPath.row]
+        } else {
+            entry = sections[indexPath.section].entries[indexPath.row]
+        }
         
         cell.lemmaLabel.text = "\(entry.navi):"
         cell.ipaLabel.text = "[ \(entry.ipa.utf8) ]"
@@ -84,12 +123,22 @@ class DictionaryTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sections[section].alpha
+        if isFiltering() {
+            return filteredSections[section].alpha
+        } else {
+            return sections[section].alpha
+        }
     }
     
     override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return sections.map { section in
-            return section.alpha
+        if isFiltering() {
+            return filteredSections.map { section in
+                return section.alpha
+            }
+        } else {
+            return sections.map { section in
+                return section.alpha
+            }
         }
     }
     
@@ -100,44 +149,59 @@ class DictionaryTableViewController: UITableViewController {
         header.textLabel?.font = UIFont.init(name: "Papyrus", size: 18.5)
     }
     
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
     
-    private func loadEntries() {
-        entries = dictionary.getEntries()
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
     }
+    
+    func searchBarIsEmpty() -> Bool {
+        // Returns true if the text is empty or nil
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        let searchTerms = searchText.components(separatedBy: " ")
+        var localFilteredSections = sections
+        for term in searchTerms {
+            if(term == "") {
+                continue
+            }
+            localFilteredSections = filterSections(sections: localFilteredSections, searchTerm: term)
+        }
+        
+        filteredSections = localFilteredSections
+        
+        tableView.reloadData()
+    }
+    
+    private func filterSections(sections: [Section], searchTerm: String) -> [Section] {
+        // Create a new list of sections, filtering each section's list of entries by search term
+        let sections = sections.map({( section: Section) -> Section in
+            let entries = section.entries.filter({( entry : Entry) -> Bool in
+                let term = searchTerm.lowercased()
+                return entry.navi.lowercased().contains(term) ||
+                        entry.definition.lowercased().contains(term) ||
+                        entry.fancyPartOfSpeech.lowercased().contains(term) ||
+                        entry.ipa.lowercased().contains(term) ||
+                        entry.partOfSpeech.replacingOccurrences(of: "^", with: "").contains(term)
+                
+            })
+            return Section(alpha: section.alpha, entries: entries)
+        })
+        
+        // Strip out any sections that have 0 entries in them
+        return sections.filter({( section : Section) -> Bool in
+            return section.entries.count > 0
+            //return candy.name.lowercased().contains(searchText.lowercased())
+        })
+    }
+    
+    /*private func loadEntries() {
+        entries = dictionary.getEntries()
+    }*/
     
     private func loadSections() {
         sections = dictionary.getSections()
@@ -149,7 +213,13 @@ class DictionaryTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDictionaryEntry" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let entry = sections[indexPath.section].entries[indexPath.row]
+                
+                let entry: Entry
+                if isFiltering() {
+                    entry = filteredSections[indexPath.section].entries[indexPath.row]
+                } else {
+                    entry = sections[indexPath.section].entries[indexPath.row]
+                }
                 let controller = segue.destination as! DictionaryViewController
                 controller.entry = entry
                 //controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem

@@ -19,6 +19,11 @@ class DictionaryViewController: UIViewController {
     
     var entry: Entry?
     
+    // MARK: - Actions
+    @IBAction func goBack() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -36,6 +41,8 @@ class DictionaryViewController: UIViewController {
             ipaLabel?.text = "[ \(entry.ipa.utf8) ]"
             partOfSpeechLabel?.text = entry.fancyPartOfSpeech
             definitionLabel?.text = entry.definition
+            navigationItem.title = entry.navi
+            navigationItem.hidesBackButton = true
         }
         
     }

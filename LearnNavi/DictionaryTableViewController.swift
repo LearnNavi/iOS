@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DictionaryTableViewController: UITableViewController, UISearchResultsUpdating {
+class DictionaryTableViewController: UITableViewController, UISearchResultsUpdating, UINavigationControllerDelegate {
 
     // MARK: Properties
     var dictionary : Dictionary!
@@ -54,6 +54,8 @@ class DictionaryTableViewController: UITableViewController, UISearchResultsUpdat
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Dictionary"
+        searchController.searchBar.keyboardAppearance = UIKeyboardAppearance.dark
+        
         definesPresentationContext = true
         
         if #available(iOS 11.0, *) {

@@ -141,7 +141,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Dictionary" id="F6t-Y0-eo4">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="1Y0-PH-9ND">
+                        <barButtonItem key="leftBarButtonItem" image="Icon-Back" id="1Y0-PH-9ND">
                             <connections>
                                 <segue destination="V0F-T2-9w1" kind="unwind" unwindAction="unwindSeque:" id="lE8-Ax-X6Z"/>
                             </connections>
@@ -155,7 +155,7 @@
             </objects>
             <point key="canvasLocation" x="4108.695652173913" y="-298.36956521739131"/>
         </scene>
-        <!--Dictionary View Controller-->
+        <!--Lemma-->
         <scene sceneID="g0O-a4-HDj">
             <objects>
                 <viewController id="FH0-AL-Ajw" customClass="DictionaryViewController" customModule="LearnNavi" customModuleProvider="target" sceneMemberID="viewController">
@@ -223,6 +223,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m4e-FL-jv4"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Lemma" id="Uhy-Fw-X2E">
+                        <barButtonItem key="leftBarButtonItem" image="Icon-Back" id="gCd-hx-nGw">
+                            <connections>
+                                <action selector="goBack" destination="FH0-AL-Ajw" id="1NU-Tu-lpD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -578,5 +585,6 @@
         <image name="Background-Resources" width="414" height="736"/>
         <image name="Button_Gray" width="280" height="50"/>
         <image name="Button_Purple" width="280" height="50"/>
+        <image name="Icon-Back" width="13" height="21"/>
     </resources>
 </document>

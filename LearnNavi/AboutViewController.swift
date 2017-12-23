@@ -28,8 +28,14 @@ class AboutViewController: LNViewController {
         let versionNumber = Config.sharedInstance.versionNumber
         let buildNumber = Config.sharedInstance.buildNumber
         let gitHash = Config.sharedInstance.gitHash
+        let dictionary = Dictionary.openDictionary()
+        if let dictionaryVersion = dictionary.version {
+            versionLabel.text = String(format: "Version %@ (%@-%@-%d)", versionNumber, gitHash, buildNumber, dictionaryVersion)
+        } else {
+            versionLabel.text = String(format: "Version %@ (%@-%@)", versionNumber, gitHash, buildNumber)
+        }
         
-        versionLabel.text = String(format: "Version %@ (%@-%@)", versionNumber, gitHash, buildNumber)
+        
     }
     
     /*

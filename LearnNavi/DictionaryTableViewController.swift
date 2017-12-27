@@ -44,6 +44,8 @@ class DictionaryTableViewController: UITableViewController, UISearchResultsUpdat
         self.tableView.backgroundColor = UIColor.black
         
         self.tableView.sectionIndexColor = UIColor.orange //UIColor(red: 120/255, green: 0.0, blue: 240/255, alpha: 1)
+        self.tableView.sectionIndexBackgroundColor = UIColor.clear
+        
         //self.tableView.sectionIndexTrackingBackgroundColor
         //let appDelegate = UIApplication.shared.delegate as! AppDelegate
         dictionary = Dictionary.openDictionary()
@@ -55,6 +57,8 @@ class DictionaryTableViewController: UITableViewController, UISearchResultsUpdat
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Dictionary"
         searchController.searchBar.keyboardAppearance = UIKeyboardAppearance.dark
+        searchController.searchBar.barTintColor = UIColor.black
+        //searchController.searchBar.searchBarStyle = UISearchBarStyle.
         
         definesPresentationContext = true
         

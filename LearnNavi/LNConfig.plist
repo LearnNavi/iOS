@@ -5,9 +5,9 @@
 	<key>LNButtonHighlightedImage</key>
 	<string>Button_Orange</string>
 	<key>LNButtonBackImage</key>
-	<string>Button_Purple</string>
-	<key>LNButtonImage</key>
 	<string>Button_Gray</string>
+	<key>LNButtonImage</key>
+	<string>Button_Purple</string>
 	<key>LNWebsiteURL</key>
 	<string>https://www.learnnavi.org</string>
 	<key>LNDictionaryURL</key>

@@ -404,7 +404,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "#!/bin/bash\n\n# This script automatically sets the version and short version string of\n# an Xcode project from the Git repository containing the project.\n#\n# To use this script in Xcode 4, add the contents to a \"Run Script\" build\n# phase for your application target.\n\nset -o errexit\nset -o nounset\n\nINFO_PLIST=\"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Info\"\n\n# Use the latest version tag for CFBundleShortVersionString. I tag releases\n# in Git using the format v0.0.0; this assumes you're doing the same.\n#SHORT_VERSION=$(git --git-dir=\"${PROJECT_DIR}/.git\" --work-tree=\"${PROJECT_DIR}\" describe --dirty | sed -e 's/^v//' -e 's/g//')\n\n# I'd like to use the Git commit hash for CFBundleVersion.\nVERSION=$(git --git-dir=\"${PROJECT_DIR}/.git\" --work-tree=\"${PROJECT_DIR}\" rev-parse --short HEAD)\n\n# But Apple wants this value to be a monotonically increasing integer, so\n# instead use the number of commits on the master branch. If you like to\n# play fast and loose with your Git history, this may cause you problems.\n# Thanks to @amrox for pointing out the issue and fix.\nBUILD_NUM=$(git --git-dir=\"${PROJECT_DIR}/.git\" --work-tree=\"${PROJECT_DIR}\" rev-list master | wc -l)\n\n#defaults write $INFO_PLIST CFBundleShortVersionString $SHORT_VERSION\ndefaults write $INFO_PLIST LNGitHash $VERSION\ndefaults write $INFO_PLIST CFBundleVersion $BUILD_NUM";
+			shellScript = "#!/bin/bash\n\n# This script automatically sets the version and short version string of\n# an Xcode project from the Git repository containing the project.\n#\n# To use this script in Xcode 4, add the contents to a \"Run Script\" build\n# phase for your application target.\n\nset -o errexit\nset -o nounset\n\nINFO_PLIST=\"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Info\"\necho $INFO_PLIST\n# Use the latest version tag for CFBundleShortVersionString. I tag releases\n# in Git using the format v0.0.0; this assumes you're doing the same.\n#SHORT_VERSION=$(git --git-dir=\"${PROJECT_DIR}/.git\" --work-tree=\"${PROJECT_DIR}\" describe --dirty | sed -e 's/^v//' -e 's/g//')\n\n# I'd like to use the Git commit hash for CFBundleVersion.\nVERSION=$(git --git-dir=\"${PROJECT_DIR}/.git\" --work-tree=\"${PROJECT_DIR}\" rev-parse --short HEAD)\n\n# But Apple wants this value to be a monotonically increasing integer, so\n# instead use the number of commits on the master branch. If you like to\n# play fast and loose with your Git history, this may cause you problems.\n# Thanks to @amrox for pointing out the issue and fix.\nBUILD_NUM=$(git --git-dir=\"${PROJECT_DIR}/.git\" --work-tree=\"${PROJECT_DIR}\" rev-list master | wc -l)\n\n#defaults write $INFO_PLIST CFBundleShortVersionString $SHORT_VERSION\ndefaults write \"$INFO_PLIST\" LNGitHash $VERSION\ndefaults write \"$INFO_PLIST\" CFBundleVersion $BUILD_NUM";
 		};
 		099F72361F814F430038261B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -523,6 +523,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 5X7KP44M4V;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -582,6 +583,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 5X7KP44M4V;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -752,8 +754,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 5X7KP44M4V;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -767,6 +771,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = org.learnnavi.languageleaningtool;
+				PROVISIONING_PROFILE_SPECIFIER = "Learn Navi App Store";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;

@@ -311,7 +311,7 @@
 				TargetAttributes = {
 					0989133C1F7F3A64006D337D = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.iCloud = {
 								enabled = 0;
@@ -604,8 +604,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 5X7KP44M4V;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -618,8 +618,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.learnnavi.languageleaningtool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "6aa3aa26-a6ff-4d6f-86df-a92cac8388bf";
+				PROVISIONING_PROFILE_SPECIFIER = "Learn Navi App Store";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -632,8 +632,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5X7KP44M4V;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -645,8 +645,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.learnnavi.languageleaningtool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "6aa3aa26-a6ff-4d6f-86df-a92cac8388bf";
+				PROVISIONING_PROFILE_SPECIFIER = "Learn Navi App Store";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

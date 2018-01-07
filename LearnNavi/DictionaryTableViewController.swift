@@ -55,6 +55,8 @@ class DictionaryTableViewController: UITableViewController, UISearchResultsUpdat
         
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.placeholder = "Search Dictionary"
         searchController.searchBar.keyboardAppearance = UIKeyboardAppearance.dark
         searchController.searchBar.barTintColor = UIColor.black
@@ -73,6 +75,11 @@ class DictionaryTableViewController: UITableViewController, UISearchResultsUpdat
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        //searchController.dismiss(animated: false, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {

@@ -84,7 +84,7 @@
         <!--Dictionary-->
         <scene sceneID="oiB-IS-T1s">
             <objects>
-                <tableViewController id="hqH-ba-4JE" customClass="DictionaryTableViewController" customModule="LearnNavi" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController extendedLayoutIncludesOpaqueBars="YES" id="hqH-ba-4JE" customClass="DictionaryTableViewController" customModule="LearnNavi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="1" id="kcg-Pq-qPv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

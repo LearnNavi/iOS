@@ -325,16 +325,14 @@
                             <constraint firstItem="KiY-Py-hbQ" firstAttribute="bottom" secondItem="lXN-70-6Or" secondAttribute="bottom" constant="50" id="Apg-C4-bGZ"/>
                             <constraint firstItem="KiY-Py-hbQ" firstAttribute="trailing" secondItem="lXN-70-6Or" secondAttribute="trailing" constant="40" id="HrP-y8-N9g"/>
                             <constraint firstItem="M8G-0K-nzm" firstAttribute="centerY" secondItem="CsT-Ig-m2A" secondAttribute="centerY" id="Jrc-jA-yCd"/>
-                            <constraint firstAttribute="trailing" secondItem="7NT-4y-1ZR" secondAttribute="trailing" constant="40" id="Z8t-KK-55v"/>
-                            <constraint firstItem="KiY-Py-hbQ" firstAttribute="trailing" secondItem="7NT-4y-1ZR" secondAttribute="trailing" constant="40" id="auo-uk-bqR"/>
+                            <constraint firstItem="7NT-4y-1ZR" firstAttribute="leading" secondItem="KiY-Py-hbQ" secondAttribute="leading" constant="40" id="Pi3-wH-DrM"/>
                             <constraint firstItem="7NT-4y-1ZR" firstAttribute="top" secondItem="KiY-Py-hbQ" secondAttribute="top" constant="50" id="dYJ-Mi-Ggh"/>
                             <constraint firstItem="KiY-Py-hbQ" firstAttribute="trailing" secondItem="M8G-0K-nzm" secondAttribute="trailing" constant="40" id="gz4-Ay-9UD"/>
                             <constraint firstItem="M8G-0K-nzm" firstAttribute="leading" secondItem="KiY-Py-hbQ" secondAttribute="leading" constant="40" id="neU-Qr-PtK"/>
                             <constraint firstAttribute="bottom" secondItem="DNi-dX-hE5" secondAttribute="bottom" id="o0w-8p-Yqg"/>
                             <constraint firstItem="DNi-dX-hE5" firstAttribute="top" secondItem="CsT-Ig-m2A" secondAttribute="top" id="qfA-N3-d2j"/>
-                            <constraint firstItem="7NT-4y-1ZR" firstAttribute="leading" secondItem="KiY-Py-hbQ" secondAttribute="leading" constant="40" id="rYb-dx-Ubt"/>
+                            <constraint firstItem="KiY-Py-hbQ" firstAttribute="trailing" secondItem="7NT-4y-1ZR" secondAttribute="trailing" constant="40" id="r6P-hP-4Lx"/>
                             <constraint firstItem="DNi-dX-hE5" firstAttribute="leading" secondItem="KiY-Py-hbQ" secondAttribute="leading" id="uNy-CW-l0r"/>
-                            <constraint firstItem="7NT-4y-1ZR" firstAttribute="leading" secondItem="CsT-Ig-m2A" secondAttribute="leading" constant="40" id="yMz-Wy-D6C"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KiY-Py-hbQ"/>
                     </view>
@@ -492,17 +490,17 @@ Special thanks to DrowElfMorwen for providing the artwork, and to Seze for doing
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="cQJ-rq-llr" firstAttribute="trailing" secondItem="TjG-LK-uPn" secondAttribute="trailing" constant="40" id="4E7-Wc-gqP"/>
                             <constraint firstItem="a8a-GZ-4z3" firstAttribute="leading" secondItem="cQJ-rq-llr" secondAttribute="leading" constant="40" id="AbJ-Qm-WXI"/>
                             <constraint firstItem="GGB-1n-bP3" firstAttribute="leading" secondItem="nZ1-hG-Rgi" secondAttribute="leading" id="FQP-8m-aNb"/>
                             <constraint firstItem="cQJ-rq-llr" firstAttribute="trailing" secondItem="ETQ-r6-ZtA" secondAttribute="trailing" constant="40" id="Ilu-uE-thO"/>
                             <constraint firstItem="cQJ-rq-llr" firstAttribute="trailing" secondItem="a8a-GZ-4z3" secondAttribute="trailing" constant="40" id="UwD-Qb-k23"/>
+                            <constraint firstItem="TjG-LK-uPn" firstAttribute="leading" secondItem="cQJ-rq-llr" secondAttribute="leading" constant="40" id="VTK-hJ-HpK"/>
                             <constraint firstItem="cQJ-rq-llr" firstAttribute="bottom" secondItem="a8a-GZ-4z3" secondAttribute="bottom" constant="50" id="W83-yI-6Yo"/>
                             <constraint firstItem="TjG-LK-uPn" firstAttribute="top" secondItem="cQJ-rq-llr" secondAttribute="top" constant="50" id="ea4-9h-7Xa"/>
                             <constraint firstItem="ETQ-r6-ZtA" firstAttribute="leading" secondItem="cQJ-rq-llr" secondAttribute="leading" constant="40" id="edk-iA-Nud"/>
                             <constraint firstItem="ETQ-r6-ZtA" firstAttribute="centerY" secondItem="nZ1-hG-Rgi" secondAttribute="centerY" id="fjV-DK-Wzy"/>
                             <constraint firstItem="GGB-1n-bP3" firstAttribute="top" secondItem="nZ1-hG-Rgi" secondAttribute="top" id="hHd-Br-daJ"/>
-                            <constraint firstAttribute="trailing" secondItem="TjG-LK-uPn" secondAttribute="trailing" constant="40" id="hdi-kE-IV0"/>
-                            <constraint firstItem="TjG-LK-uPn" firstAttribute="leading" secondItem="nZ1-hG-Rgi" secondAttribute="leading" constant="40" id="kD1-aF-90f"/>
                             <constraint firstItem="GGB-1n-bP3" firstAttribute="trailing" secondItem="nZ1-hG-Rgi" secondAttribute="trailing" id="o9D-ii-g17"/>
                             <constraint firstItem="GGB-1n-bP3" firstAttribute="bottom" secondItem="nZ1-hG-Rgi" secondAttribute="bottom" id="yu5-qw-U3U"/>
                         </constraints>
@@ -529,7 +527,7 @@ Special thanks to DrowElfMorwen for providing the artwork, and to Seze for doing
                             <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleToFill" image="Background-Resources" translatesAutoresizingMaskIntoConstraints="NO" id="Hzw-ER-YCg">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wJV-3j-0vO">
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJV-3j-0vO">
                                 <rect key="frame" x="40" y="130" width="334" height="496"/>
                                 <string key="text">The Na'vi language was created by Paul Frommer. Much of the information displayed in this App was written by Prof. Frommer and is presented here for educational purposes only. Learn Na'vi is not affiliated with the official Avatar website, James Cameron, or the Twentieth Century-Fox Film Corporation. All trademarks and servicemarks are the properties of their respective owners.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -542,13 +542,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.learnnavi.mobile.ios.local.LearnNavi;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		098913641F7F3A64006D337D /* Release */ = {
+		098913641F7F3A64006D337D /* Crashlytics Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -593,11 +594,12 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = org.learnnavi.mobile.ios.LearnNavi;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = "Crashlytics Beta";
 		};
 		098913661F7F3A64006D337D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -626,7 +628,7 @@
 			};
 			name = Debug;
 		};
-		098913671F7F3A64006D337D /* Release */ = {
+		098913671F7F3A64006D337D /* Crashlytics Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -651,7 +653,7 @@
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = Release;
+			name = "Crashlytics Beta";
 		};
 		098913691F7F3A64006D337D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -670,7 +672,7 @@
 			};
 			name = Debug;
 		};
-		0989136A1F7F3A64006D337D /* Release */ = {
+		0989136A1F7F3A64006D337D /* Crashlytics Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -685,7 +687,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LearnNavi.app/LearnNavi";
 			};
-			name = Release;
+			name = "Crashlytics Beta";
 		};
 		0989136C1F7F3A64006D337D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -703,7 +705,7 @@
 			};
 			name = Debug;
 		};
-		0989136D1F7F3A64006D337D /* Release */ = {
+		0989136D1F7F3A64006D337D /* Crashlytics Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -717,7 +719,119 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = LearnNavi;
 			};
-			name = Release;
+			name = "Crashlytics Beta";
+		};
+		09AA708020028C1C00990506 /* App Store */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = org.learnnavi.languageleaningtool;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "App Store";
+		};
+		09AA708120028C1C00990506 /* App Store */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 5X7KP44M4V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = LearnNavi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.learnnavi.languageleaningtool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6aa3aa26-a6ff-4d6f-86df-a92cac8388bf";
+				PROVISIONING_PROFILE_SPECIFIER = "Learn Navi App Store";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "App Store";
+		};
+		09AA708220028C1C00990506 /* App Store */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5X7KP44M4V;
+				INFOPLIST_FILE = LearnNaviTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.learnnavi.mobile.ios.LearnNaviTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LearnNavi.app/LearnNavi";
+			};
+			name = "App Store";
+		};
+		09AA708320028C1C00990506 /* App Store */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5X7KP44M4V;
+				INFOPLIST_FILE = LearnNaviUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.learnnavi.mobile.ios.LearnNaviUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LearnNavi;
+			};
+			name = "App Store";
 		};
 /* End XCBuildConfiguration section */
 
@@ -726,37 +840,41 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				098913631F7F3A64006D337D /* Debug */,
-				098913641F7F3A64006D337D /* Release */,
+				098913641F7F3A64006D337D /* Crashlytics Beta */,
+				09AA708020028C1C00990506 /* App Store */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Crashlytics Beta";
 		};
 		098913651F7F3A64006D337D /* Build configuration list for PBXNativeTarget "LearnNavi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				098913661F7F3A64006D337D /* Debug */,
-				098913671F7F3A64006D337D /* Release */,
+				098913671F7F3A64006D337D /* Crashlytics Beta */,
+				09AA708120028C1C00990506 /* App Store */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Crashlytics Beta";
 		};
 		098913681F7F3A64006D337D /* Build configuration list for PBXNativeTarget "LearnNaviTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				098913691F7F3A64006D337D /* Debug */,
-				0989136A1F7F3A64006D337D /* Release */,
+				0989136A1F7F3A64006D337D /* Crashlytics Beta */,
+				09AA708220028C1C00990506 /* App Store */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Crashlytics Beta";
 		};
 		0989136B1F7F3A64006D337D /* Build configuration list for PBXNativeTarget "LearnNaviUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0989136C1F7F3A64006D337D /* Debug */,
-				0989136D1F7F3A64006D337D /* Release */,
+				0989136D1F7F3A64006D337D /* Crashlytics Beta */,
+				09AA708320028C1C00990506 /* App Store */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Crashlytics Beta";
 		};
 /* End XCConfigurationList section */
 	};

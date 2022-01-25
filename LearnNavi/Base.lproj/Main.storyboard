@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Papyrus.ttc">
-            <string>Papyrus</string>
+        <array key="Toruk-Light.otf">
+            <string>Toruk-Light</string>
         </array>
-        <array key="Thonburi.ttc">
-            <string>Thonburi</string>
-            <string>Thonburi-Bold</string>
+        <array key="Toruk-Regular.otf">
+            <string>Toruk-Regular</string>
+        </array>
+        <array key="TorukSC-Light.otf">
+            <string>TorukSC-Light</string>
+        </array>
+        <array key="TorukSC-Regular.otf">
+            <string>TorukSC-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -32,25 +34,27 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zfm-BC-5vQ">
-                                <rect key="frame" x="0.0" y="220" width="414" height="516"/>
+                                <rect key="frame" x="0.0" y="200" width="414" height="536"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="7VE-fB-G8N">
-                                        <rect key="frame" x="40" y="200" width="334" height="115"/>
+                                        <rect key="frame" x="40" y="210.66666666666669" width="334" height="115"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Akq-MD-Rw9" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
                                                 <accessibility key="accessibilityConfiguration" label="Dictionary"/>
+                                                <fontDescription key="fontDescription" name="TorukSC-Light" family="TorukSC" pointSize="30"/>
                                                 <state key="normal" title="Dictionary" backgroundImage="Button_Purple"/>
                                                 <connections>
-                                                    <segue destination="X00-GG-CQw" kind="presentation" modalTransitionStyle="flipHorizontal" id="Ld4-5F-WEA"/>
+                                                    <segue destination="X00-GG-CQw" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="flipHorizontal" id="Ld4-5F-WEA"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbd-Ud-n1E" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="65" width="334" height="50"/>
                                                 <accessibility key="accessibilityConfiguration" label="Resources"/>
+                                                <fontDescription key="fontDescription" name="TorukSC-Light" family="TorukSC" pointSize="30"/>
                                                 <state key="normal" title="Resources" backgroundImage="Button_Purple"/>
                                                 <connections>
-                                                    <segue destination="aLy-wL-qzA" kind="presentation" modalTransitionStyle="flipHorizontal" id="Sch-Sp-OwE"/>
+                                                    <segue destination="aLy-wL-qzA" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="flipHorizontal" id="Sch-Sp-OwE"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -63,6 +67,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="5yS-K0-i4j"/>
                         <constraints>
                             <constraint firstItem="KKy-9c-OoQ" firstAttribute="top" secondItem="3V6-r7-Bnr" secondAttribute="top" id="4c0-CG-sjT"/>
                             <constraint firstItem="KKy-9c-OoQ" firstAttribute="trailing" secondItem="3V6-r7-Bnr" secondAttribute="trailing" id="TEW-KN-Ifa"/>
@@ -73,7 +78,6 @@
                             <constraint firstItem="Zfm-BC-5vQ" firstAttribute="top" secondItem="5yS-K0-i4j" secondAttribute="top" constant="200" id="s0X-3S-0HC"/>
                             <constraint firstItem="Zfm-BC-5vQ" firstAttribute="leading" secondItem="5yS-K0-i4j" secondAttribute="leading" id="soe-Ik-bl0"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="5yS-K0-i4j"/>
                     </view>
                     <navigationItem key="navigationItem" id="NYq-Jc-Zw5"/>
                 </viewController>
@@ -91,34 +95,34 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="EntryTableViewCell" id="UU5-qt-YNx" customClass="EntryTableViewCell" customModule="LearnNavi" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UU5-qt-YNx" id="cZ6-tc-lls">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="59.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lemma:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mt6-ZA-uJb">
-                                            <rect key="frame" x="20" y="11.000000000000002" width="65.666666666666671" height="20.666666666666671"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Lemma:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mt6-ZA-uJb">
+                                            <rect key="frame" x="20" y="13" width="59" height="17"/>
+                                            <fontDescription key="fontDescription" name="Toruk-Regular" family="Toruk" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[IPA]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vkd-zl-XnK">
-                                            <rect key="frame" x="88.666666666666671" y="11.000000000000002" width="37" height="20.666666666666671"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="[IPA]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vkd-zl-XnK">
+                                            <rect key="frame" x="87" y="13" width="39.333333333333329" height="17"/>
+                                            <fontDescription key="fontDescription" name="Toruk-Regular" family="Toruk" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.84583038560000001" blue="0.89005829020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pos." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVY-PB-jO0">
-                                            <rect key="frame" x="128.66666666666666" y="11.000000000000002" width="33" height="20.666666666666671"/>
-                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                            <color key="textColor" red="0.91705796632124359" green="0.0" blue="0.87579859422475537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DB-KD-4TJ">
+                                            <rect key="frame" x="20" y="32" width="374" height="17"/>
+                                            <fontDescription key="fontDescription" name="Toruk-Light" family="Toruk" pointSize="17"/>
+                                            <color key="textColor" red="0.78392753535189974" green="0.79217940414507759" blue="0.79217940414507759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DB-KD-4TJ">
-                                            <rect key="frame" x="20" y="28" width="374" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                                            <color key="textColor" red="0.78392753535189974" green="0.79217940414507759" blue="0.79217940414507759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pos." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVY-PB-jO0">
+                                            <rect key="frame" x="134" y="13" width="33" height="17"/>
+                                            <fontDescription key="fontDescription" name="TorukSC-Regular" family="TorukSC" pointSize="17"/>
+                                            <color key="textColor" red="0.91705796632124359" green="0.0" blue="0.87579859422475537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -141,7 +145,7 @@
                                     <outlet property="ipaLabel" destination="Vkd-zl-XnK" id="Ygg-Bx-rvI"/>
                                     <outlet property="lemmaLabel" destination="Mt6-ZA-uJb" id="RnE-ZL-aCo"/>
                                     <outlet property="posLabel" destination="wVY-PB-jO0" id="MH0-UJ-hYW"/>
-                                    <segue destination="FH0-AL-Ajw" kind="showDetail" identifier="showDictionaryEntry" action="showViewController:sender:" id="v3k-sp-IcI"/>
+                                    <segue destination="FH0-AL-Ajw" kind="showDetail" identifier="showDictionaryEntry" id="v3k-sp-IcI"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -174,33 +178,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-Resources" translatesAutoresizingMaskIntoConstraints="NO" id="ABb-9f-81g">
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-Resources" id="ABb-9f-81g">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ire-Aw-FUQ">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lemma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alE-Zd-hXD">
-                                        <rect key="frame" x="20" y="50" width="374" height="46"/>
-                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                        <rect key="frame" x="20" y="50" width="374" height="30"/>
+                                        <fontDescription key="fontDescription" name="Toruk-Regular" family="Toruk" pointSize="30"/>
                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Part of Speech" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oD1-WL-Hpy">
-                                        <rect key="frame" x="60.666666666666657" y="101" width="114" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Part of Speech" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oD1-WL-Hpy">
+                                        <rect key="frame" x="65" y="85" width="121.66666666666669" height="17"/>
+                                        <fontDescription key="fontDescription" name="TorukSC-Regular" family="TorukSC" pointSize="17"/>
                                         <color key="textColor" red="0.91705796630000003" green="0.0" blue="0.87579859419999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[IPA]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyx-5J-0fL">
-                                        <rect key="frame" x="19.999999999999996" y="101" width="37.666666666666657" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="20.000000000000004" y="85" width="39.333333333333343" height="17"/>
+                                        <fontDescription key="fontDescription" name="Toruk-Regular" family="Toruk" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.84583038560000001" blue="0.89005829020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIQ-0B-0Pk">
-                                        <rect key="frame" x="20" y="127.00000000000001" width="374" height="20.666666666666671"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Lorem Ipsum" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIQ-0B-0Pk">
+                                        <rect key="frame" x="20" y="110" width="374" height="17"/>
+                                        <fontDescription key="fontDescription" name="Toruk-Light" family="Toruk" pointSize="17"/>
                                         <color key="textColor" red="0.78392753540000004" green="0.79217940409999998" blue="0.79217940409999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -221,6 +226,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="m4e-FL-jv4"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ire-Aw-FUQ" firstAttribute="top" secondItem="m4e-FL-jv4" secondAttribute="top" id="2CI-vP-ILZ"/>
@@ -232,7 +238,6 @@
                             <constraint firstItem="ABb-9f-81g" firstAttribute="leading" secondItem="D9M-vf-VCm" secondAttribute="leading" id="gxL-aQ-d1H"/>
                             <constraint firstItem="Ire-Aw-FUQ" firstAttribute="bottom" secondItem="m4e-FL-jv4" secondAttribute="bottom" id="u1b-TY-3P0"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="m4e-FL-jv4"/>
                     </view>
                     <navigationItem key="navigationItem" title="Lemma" id="Uhy-Fw-X2E">
                         <barButtonItem key="leftBarButtonItem" image="Icon-Back" id="gCd-hx-nGw">
@@ -272,14 +277,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozI-4r-C3o" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
                                         <accessibility key="accessibilityConfiguration" label="About"/>
+                                        <fontDescription key="fontDescription" name="TorukSC-Light" family="TorukSC" pointSize="30"/>
                                         <state key="normal" title="About" backgroundImage="Button_Purple"/>
                                         <connections>
-                                            <segue destination="wqR-dC-B53" kind="presentation" modalTransitionStyle="crossDissolve" id="Jba-WX-3Is"/>
+                                            <segue destination="wqR-dC-B53" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="Jba-WX-3Is"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOx-Ra-BrL" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="65" width="334" height="50"/>
                                         <accessibility key="accessibilityConfiguration" label="https://learnnavi.org"/>
+                                        <fontDescription key="fontDescription" name="TorukSC-Light" family="TorukSC" pointSize="30"/>
                                         <state key="normal" title="LearnNavi.org" backgroundImage="Button_Purple"/>
                                         <connections>
                                             <action selector="openLearnNaviWebSite:" destination="aLy-wL-qzA" eventType="touchUpInside" id="JWD-6P-h8g"/>
@@ -288,6 +295,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7O3-NZ-epj" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="130" width="334" height="50"/>
                                         <accessibility key="accessibilityConfiguration" label="Disclaimer"/>
+                                        <fontDescription key="fontDescription" name="TorukSC-Light" family="TorukSC" pointSize="30"/>
                                         <state key="normal" title="Disclaimer" backgroundImage="Button_Purple"/>
                                         <connections>
                                             <segue destination="rxD-4F-hET" kind="presentation" modalTransitionStyle="crossDissolve" id="MSf-Ix-heD"/>
@@ -301,23 +309,25 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="7K8-ge-EmB"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="TorukSC-Light" family="TorukSC" pointSize="30"/>
                                 <state key="normal" title="Back" backgroundImage="Button_Gray"/>
                                 <connections>
                                     <segue destination="lDA-7b-h5d" kind="unwind" unwindAction="unwindSeque:" id="iR7-DJ-bIr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resources" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NT-4y-1ZR">
-                                <rect key="frame" x="40" y="70" width="334" height="50"/>
+                                <rect key="frame" x="40" y="50" width="334" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="OLm-b0-wmF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
+                                <fontDescription key="fontDescription" name="TorukSC-Light" family="TorukSC" pointSize="50"/>
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="shadowColor" systemColor="darkTextColor"/>
                                 <size key="shadowOffset" width="2" height="1"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="KiY-Py-hbQ"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DNi-dX-hE5" firstAttribute="trailing" secondItem="KiY-Py-hbQ" secondAttribute="trailing" id="33l-df-vR1"/>
@@ -334,7 +344,6 @@
                             <constraint firstItem="KiY-Py-hbQ" firstAttribute="trailing" secondItem="7NT-4y-1ZR" secondAttribute="trailing" constant="40" id="r6P-hP-4Lx"/>
                             <constraint firstItem="DNi-dX-hE5" firstAttribute="leading" secondItem="KiY-Py-hbQ" secondAttribute="leading" id="uNy-CW-l0r"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="KiY-Py-hbQ"/>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="lXN-70-6Or" id="Krk-c0-XUT"/>
@@ -357,18 +366,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1H-zG-d3e">
-                                <rect key="frame" x="40" y="130" width="334" height="496"/>
-                                <string key="text">Kaltxì!  Na’vi is a constructed language spoken by the Na’vi people in the world of James Cameron’s Avatar.
-LearnNavi exists to share the Na’vi language with all who want to learn, as well as to promote and assist in its continuing development. 
-Special thanks to DrowElfMorwen for providing the artwork, and to Seze for doing the iOS App Development</string>
+                                <rect key="frame" x="40" y="110" width="334" height="516"/>
+                                <string key="text">Kaltxì!  Na’vi is a constructed language spoken by the Na’vi people in the world of James Cameron’s Avatar. LearnNavi exists to share the Na’vi language with all who want to learn, as well as to promote and assist in its continuing development. Special thanks to DrowElfMorwen for providing the artwork, and to Seze for doing the iOS App Development</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="Toruk-Light" family="Toruk" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Version *.* (*)" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Uv-3d-cOT">
-                                <rect key="frame" x="40" y="701.66666666666663" width="334" height="19.333333333333371"/>
+                                <rect key="frame" x="40" y="706" width="334" height="15"/>
                                 <color key="backgroundColor" red="0.14130434780000001" green="0.14130434780000001" blue="0.14130434780000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="TorukSC-Regular" family="TorukSC" pointSize="13"/>
                                 <color key="textColor" red="1" green="0.38510544759999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.46000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="shadowOffset" width="2" height="2"/>
@@ -376,23 +383,25 @@ Special thanks to DrowElfMorwen for providing the artwork, and to Seze for doing
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5EG-Zn-thP" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
                                 <rect key="frame" x="40" y="636" width="334" height="50"/>
                                 <accessibility key="accessibilityConfiguration" label="Back"/>
+                                <fontDescription key="fontDescription" name="TorukSC-Light" family="TorukSC" pointSize="30"/>
                                 <state key="normal" title="Back" backgroundImage="Button_Gray"/>
                                 <connections>
                                     <segue destination="B1p-c9-fuV" kind="unwind" unwindAction="unwindSeque:" id="JDR-bK-D6C"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DiN-BM-qpv">
-                                <rect key="frame" x="40" y="70" width="334" height="60"/>
+                                <rect key="frame" x="40" y="50" width="334" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="VHc-4H-WNU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
+                                <fontDescription key="fontDescription" name="TorukSC-Light" family="TorukSC" pointSize="50"/>
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="shadowColor" systemColor="darkTextColor"/>
                                 <size key="shadowOffset" width="2" height="1"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="dc4-1E-jAQ"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="49t-6C-8p6" firstAttribute="leading" secondItem="038-MR-sRa" secondAttribute="leading" id="0qC-Ls-Pts"/>
@@ -413,7 +422,6 @@ Special thanks to DrowElfMorwen for providing the artwork, and to Seze for doing
                             <constraint firstItem="dc4-1E-jAQ" firstAttribute="bottom" secondItem="5EG-Zn-thP" secondAttribute="bottom" constant="50" id="oSA-3V-h0a"/>
                             <constraint firstItem="dc4-1E-jAQ" firstAttribute="trailing" secondItem="h1H-zG-d3e" secondAttribute="trailing" constant="40" id="yRa-Aw-Jx3"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="dc4-1E-jAQ"/>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="5EG-Zn-thP" id="1VN-Jv-QRE"/>
@@ -442,14 +450,16 @@ Special thanks to DrowElfMorwen for providing the artwork, and to Seze for doing
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mjp-jS-9R1" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
                                         <accessibility key="accessibilityConfiguration" label="About"/>
+                                        <fontDescription key="fontDescription" name="TorukSC-Light" family="TorukSC" pointSize="30"/>
                                         <state key="normal" title="Entries" backgroundImage="Button_Purple"/>
                                         <connections>
-                                            <segue destination="hE0-PP-WFW" kind="presentation" modalTransitionStyle="crossDissolve" id="aDQ-ne-YAh"/>
+                                            <segue destination="hE0-PP-WFW" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="aDQ-ne-YAh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgu-33-7Jt" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="65" width="334" height="50"/>
                                         <accessibility key="accessibilityConfiguration" label="https://learnnavi.org"/>
+                                        <fontDescription key="fontDescription" name="TorukSC-Light" family="TorukSC" pointSize="30"/>
                                         <state key="normal" title="View PDF" backgroundImage="Button_Purple"/>
                                         <connections>
                                             <action selector="openDictionaryPDF:" destination="X00-GG-CQw" eventType="touchUpInside" id="BfQ-Be-ubv"/>
@@ -458,6 +468,7 @@ Special thanks to DrowElfMorwen for providing the artwork, and to Seze for doing
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSh-2I-cKR" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="130" width="334" height="50"/>
                                         <accessibility key="accessibilityConfiguration" label="Disclaimer"/>
+                                        <fontDescription key="fontDescription" name="TorukSC-Light" family="TorukSC" pointSize="30"/>
                                         <state key="normal" title="Update" backgroundImage="Button_Purple"/>
                                         <connections>
                                             <action selector="updateDictionary:" destination="X00-GG-CQw" eventType="touchUpInside" id="v3Q-MD-zzS"/>
@@ -471,23 +482,25 @@ Special thanks to DrowElfMorwen for providing the artwork, and to Seze for doing
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="2oc-AU-9u9"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="TorukSC-Light" family="TorukSC" pointSize="30"/>
                                 <state key="normal" title="Back" backgroundImage="Button_Gray"/>
                                 <connections>
                                     <segue destination="ZJq-U1-bju" kind="unwind" unwindAction="unwindSeque:" id="SgQ-8C-YP3"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dictionary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TjG-LK-uPn">
-                                <rect key="frame" x="40" y="70" width="334" height="60"/>
+                                <rect key="frame" x="40" y="50" width="334" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Ika-cB-Bgf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
+                                <fontDescription key="fontDescription" name="TorukSC-Light" family="TorukSC" pointSize="50"/>
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="shadowColor" systemColor="darkTextColor"/>
                                 <size key="shadowOffset" width="2" height="1"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="cQJ-rq-llr"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cQJ-rq-llr" firstAttribute="trailing" secondItem="TjG-LK-uPn" secondAttribute="trailing" constant="40" id="4E7-Wc-gqP"/>
@@ -504,7 +517,6 @@ Special thanks to DrowElfMorwen for providing the artwork, and to Seze for doing
                             <constraint firstItem="GGB-1n-bP3" firstAttribute="trailing" secondItem="nZ1-hG-Rgi" secondAttribute="trailing" id="o9D-ii-g17"/>
                             <constraint firstItem="GGB-1n-bP3" firstAttribute="bottom" secondItem="nZ1-hG-Rgi" secondAttribute="bottom" id="yu5-qw-U3U"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="cQJ-rq-llr"/>
                     </view>
                     <navigationItem key="navigationItem" id="NrB-i8-AU1"/>
                     <connections>
@@ -521,40 +533,42 @@ Special thanks to DrowElfMorwen for providing the artwork, and to Seze for doing
             <objects>
                 <viewController id="rxD-4F-hET" customClass="LNViewController" customModule="LearnNavi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qTR-Ln-vkz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleToFill" image="Background-Resources" translatesAutoresizingMaskIntoConstraints="NO" id="Hzw-ER-YCg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                             </imageView>
                             <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJV-3j-0vO">
-                                <rect key="frame" x="40" y="130" width="334" height="496"/>
+                                <rect key="frame" x="40" y="110" width="334" height="496"/>
                                 <string key="text">The Na'vi language was created by Paul Frommer. Much of the information displayed in this App was written by Prof. Frommer and is presented here for educational purposes only. Learn Na'vi is not affiliated with the official Avatar website, James Cameron, or the Twentieth Century-Fox Film Corporation. All trademarks and servicemarks are the properties of their respective owners.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="Toruk-Light" family="Toruk" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cq1-Z1-JD6" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
-                                <rect key="frame" x="40" y="636" width="334" height="50"/>
+                                <rect key="frame" x="40" y="616" width="334" height="50"/>
                                 <accessibility key="accessibilityConfiguration" label="Back"/>
+                                <fontDescription key="fontDescription" name="TorukSC-Light" family="TorukSC" pointSize="30"/>
                                 <state key="normal" title="Back" backgroundImage="Button_Gray"/>
                                 <connections>
                                     <segue destination="Drm-Bp-oCY" kind="unwind" unwindAction="unwindSeque:" id="AfW-Yz-38k"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disclaimer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVF-dt-oNN">
-                                <rect key="frame" x="40" y="70" width="334" height="60"/>
+                                <rect key="frame" x="40" y="50" width="334" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="eYj-NX-x8j"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
+                                <fontDescription key="fontDescription" name="TorukSC-Light" family="TorukSC" pointSize="50"/>
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="shadowColor" systemColor="darkTextColor"/>
                                 <size key="shadowOffset" width="2" height="1"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <viewLayoutGuide key="safeArea" id="Y5c-UA-4hf"/>
+                        <color key="backgroundColor" systemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="Hzw-ER-YCg" firstAttribute="top" secondItem="qTR-Ln-vkz" secondAttribute="top" id="GqO-uY-lZw"/>
                             <constraint firstItem="wJV-3j-0vO" firstAttribute="top" secondItem="PVF-dt-oNN" secondAttribute="bottom" id="OD7-GQ-1B3"/>
@@ -571,7 +585,6 @@ Special thanks to DrowElfMorwen for providing the artwork, and to Seze for doing
                             <constraint firstItem="PVF-dt-oNN" firstAttribute="leading" secondItem="Y5c-UA-4hf" secondAttribute="leading" constant="40" id="pzk-Fl-FGx"/>
                             <constraint firstItem="Cq1-Z1-JD6" firstAttribute="leading" secondItem="Y5c-UA-4hf" secondAttribute="leading" constant="40" id="s5d-2h-HFY"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Y5c-UA-4hf"/>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="Cq1-Z1-JD6" id="Vbi-i3-QGw"/>
@@ -590,7 +603,7 @@ Special thanks to DrowElfMorwen for providing the artwork, and to Seze for doing
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="PgT-db-Rwq">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="0.38510544759999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
@@ -613,5 +626,8 @@ Special thanks to DrowElfMorwen for providing the artwork, and to Seze for doing
         <image name="Button_Gray" width="280" height="50"/>
         <image name="Button_Purple" width="280" height="50"/>
         <image name="Icon-Back" width="13" height="21"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

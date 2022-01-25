@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Fabric
-import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,16 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         super.init()
     }
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        Fabric.with([Crashlytics.self])
         let dictionary = Dictionary.openDictionary()
         let currentVersion = dictionary.version!
         print("Database version: \(currentVersion)")
         Dictionary.checkForUpdate(currentVersion) { ( updateAvailable ) in
             if (updateAvailable) {
                 let alert = UIAlertController(title: "Dictionary Update", message:
-                    "New updates are now available! Download them now?", preferredStyle: UIAlertControllerStyle.alert)
+                    "New updates are now available! Download them now?", preferredStyle: UIAlertController.Style.alert)
                 let actionYes = UIAlertAction(title: "Yes", style: .default, handler: { action in
                     print("User wants updates!")
                     Dictionary.downloadDictionary() { ( updateSuccessful ) in

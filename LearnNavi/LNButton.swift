@@ -20,8 +20,8 @@ class LNButton: UIButton {
         self.setBackgroundImage(UIImage.init(named: buttonImage), for: .normal)
         self.setBackgroundImage(UIImage.init(named: buttonHighlightedImage), for: .selected)
         self.setBackgroundImage(UIImage.init(named: buttonHighlightedImage), for: .highlighted)
-        self.contentEdgeInsets = UIEdgeInsetsMake(10.0, 0.0, 0.0, 0.0)
-        self.titleLabel!.font = UIFont.init(name: "Papyrus", size: 32.0)
+        //self.contentEdgeInsets = UIEdgeInsets.init(top: 10.0, left: 0.0, bottom: 0.0, right: 0.0)
+        //self.titleLabel!.font = UIFont.init(name: "Toruk SC", size: 30.0)
         //self.setTitleColor(UIColor.white, for: [])
         //self.titleLabel!.highlightedTextColor = UIColor.white
         

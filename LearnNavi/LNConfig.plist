@@ -11,7 +11,7 @@
 	<key>LNWebsiteURL</key>
 	<string>https://www.learnnavi.org</string>
 	<key>LNDictionaryURL</key>
-	<string>https://eanaeltu.learnnavi.org/dicts/NaviDictionary.pdf</string>
+	<string>https://files.learnnavi.org/dicts/NaviDictionary.pdf</string>
 	<key>LNDatabaseFilename</key>
 	<string>database.sqlite</string>
 	<key>LNDatabaseServerURL</key>

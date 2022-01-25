@@ -34,10 +34,10 @@ final class Config {
         buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
         gitHash = Bundle.main.infoDictionary?["LNGitHash"] as! String
         
-        documentsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first as URL!
+        documentsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as URL
     }
     
-    open func fetchConfigItem(forKey aKey: Any) -> Any? {
+    public func fetchConfigItem(forKey aKey: Any) -> Any? {
         if envConfig != nil {
             return envConfig!.object(forKey: aKey)
         } else {
@@ -45,47 +45,47 @@ final class Config {
         }
     }
     
-    open func buttonBackImage() -> String {
+    public func buttonBackImage() -> String {
         return fetchConfigItem(forKey: "LNButtonBackImage") as! String
     }
     
-    open func buttonImage() -> String {
+    public func buttonImage() -> String {
         return fetchConfigItem(forKey: "LNButtonImage") as! String
     }
     
-    open func buttonHighlightedImage() -> String {
+    public func buttonHighlightedImage() -> String {
         return fetchConfigItem(forKey: "LNButtonHighlightedImage") as! String
     }
     
-    open func websiteURL() -> String {
+    public func websiteURL() -> String {
         return fetchConfigItem(forKey: "LNWebsiteURL") as! String
     }
     
-    open func dictionaryURL() -> String {
+    public func dictionaryURL() -> String {
         return fetchConfigItem(forKey: "LNDictionaryURL") as! String
     }
     
-    open func databaseFilename() -> String {
+    public func databaseFilename() -> String {
         return fetchConfigItem(forKey: "LNDatabaseFilename") as! String
     }
     
-    open func databaseFileURL() -> URL {
+    public func databaseFileURL() -> URL {
         return documentsUrl.appendingPathComponent(databaseFilename())
     }
     
-    open func versionFilename() -> String {
+    public func versionFilename() -> String {
         return fetchConfigItem(forKey: "LNDatabaseVersionFile") as! String
     }
     
-    open func serverURL() -> String {
+    public func serverURL() -> String {
         return fetchConfigItem(forKey: "LNDatabaseServerURL") as! String
     }
     
-    open func databaseURL() -> String {
+    public func databaseURL() -> String {
         return serverURL() + databaseFilename()
     }
     
-    open func versionURL() -> String {
+    public func versionURL() -> String {
         return serverURL() + versionFilename()
     }
 }

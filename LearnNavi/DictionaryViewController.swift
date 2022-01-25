@@ -29,10 +29,11 @@ class DictionaryViewController: UIViewController {
        
         // Add a background view to the table view
 
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
         let blurView = UIVisualEffectView(effect: blurEffect)
         //blurView.alpha = 0.8
         blurView.frame = imageView!.bounds
+        
         imageView!.addSubview(blurView)
         //self.view?.addSubview(imageView!)
         

@@ -25,7 +25,7 @@ class DictionaryTableViewController: UITableViewController, UISearchResultsUpdat
         // Add a background view to the table view
         let backgroundImage = UIImage(named: "Background-Resources")
         let imageView = UIImageView(image: backgroundImage)
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
         let blurView = UIVisualEffectView(effect: blurEffect)
         
         //blurView.alpha = 0.8
@@ -37,7 +37,7 @@ class DictionaryTableViewController: UITableViewController, UISearchResultsUpdat
         //blurView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         //blurView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         imageView.autoresizesSubviews = true
-        blurView.autoresizingMask = [UIViewAutoresizing.flexibleHeight, UIViewAutoresizing.flexibleWidth]
+        blurView.autoresizingMask = [UIView.AutoresizingMask.flexibleHeight, UIView.AutoresizingMask.flexibleWidth]
         imageView.addSubview(blurView)
         imageView.alpha = 0.6
         self.tableView.backgroundView = imageView
@@ -55,7 +55,6 @@ class DictionaryTableViewController: UITableViewController, UISearchResultsUpdat
         
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.dimsBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.placeholder = "Search Dictionary"
         searchController.searchBar.keyboardAppearance = UIKeyboardAppearance.dark
@@ -64,11 +63,8 @@ class DictionaryTableViewController: UITableViewController, UISearchResultsUpdat
         
         definesPresentationContext = true
         
-        if #available(iOS 11.0, *) {
-            navigationItem.searchController = searchController
-        } else {
-            tableView.tableHeaderView = searchController.searchBar
-        }
+        navigationItem.searchController = searchController
+    
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

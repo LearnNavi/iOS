@@ -61,6 +61,10 @@ final class Config {
         return fetchConfigItem(forKey: "LNWebsiteURL") as! String
     }
     
+    public func privacyPolicyURL() -> String {
+        return fetchConfigItem(forKey: "LNPrivacyPolicyURL") as! String
+    }
+    
     public func dictionaryURL() -> String {
         return fetchConfigItem(forKey: "LNDictionaryURL") as! String
     }

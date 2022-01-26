@@ -255,6 +255,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				09E222ED279F9B3000E02C4C /* PBXTargetDependency */,
 			);
 			name = LearnNavi;
 			packageProductDependencies = (
@@ -466,6 +467,10 @@
 			isa = PBXTargetDependency;
 			target = 0989133C1F7F3A64006D337D /* LearnNavi */;
 			targetProxy = 0989135D1F7F3A64006D337D /* PBXContainerItemProxy */;
+		};
+		09E222ED279F9B3000E02C4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 09E222EC279F9B3000E02C4C /* SQLite */;
 		};
 /* End PBXTargetDependency section */
 
@@ -793,6 +798,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		09E222DA279F71B900E02C4C /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 09E222D9279F71B900E02C4C /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
+		09E222EC279F9B3000E02C4C /* SQLite */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 09E222D9279F71B900E02C4C /* XCRemoteSwiftPackageReference "SQLite" */;
 			productName = SQLite;

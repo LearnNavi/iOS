@@ -39,6 +39,16 @@ class LNViewController: UIViewController, UINavigationControllerDelegate {
         }
     }
     
+    @IBAction func openLearnNaviPrivacyPolicy(_ sender: UIButton) {
+        let url = Config.sharedInstance.privacyPolicyURL()
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(URL(string: url)!, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(URL(string: url)!)
+            // Fallback on earlier versions
+        }
+    }
+    
     @IBAction func updateDictionary(_ sender: UIButton) {
         Dictionary.downloadDictionary() { ( updateSuccessful ) in
             if( updateSuccessful ) {

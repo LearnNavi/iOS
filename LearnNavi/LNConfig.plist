@@ -10,6 +10,8 @@
 	<string>Button_Purple</string>
 	<key>LNWebsiteURL</key>
 	<string>https://www.learnnavi.org</string>
+	<key>LNPrivacyPolicyURL</key>
+	<string>https://learnnavi.org/privacy-policy-mobile-apps/</string>
 	<key>LNDictionaryURL</key>
 	<string>https://files.learnnavi.org/dicts/NaviDictionary.pdf</string>
 	<key>LNDatabaseFilename</key>

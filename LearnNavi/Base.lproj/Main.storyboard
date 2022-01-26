@@ -272,7 +272,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="M8G-0K-nzm">
-                                <rect key="frame" x="40" y="278" width="334" height="180"/>
+                                <rect key="frame" x="40" y="245.66666666666663" width="334" height="245"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozI-4r-C3o" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -284,7 +284,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOx-Ra-BrL" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="65" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="65.000000000000028" width="334" height="50"/>
                                         <accessibility key="accessibilityConfiguration" label="https://learnnavi.org"/>
                                         <fontDescription key="fontDescription" name="TorukSC-Light" family="TorukSC" pointSize="30"/>
                                         <state key="normal" title="LearnNavi.org" backgroundImage="Button_Purple"/>
@@ -293,12 +293,21 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7O3-NZ-epj" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="130" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="130.00000000000003" width="334" height="50"/>
                                         <accessibility key="accessibilityConfiguration" label="Disclaimer"/>
                                         <fontDescription key="fontDescription" name="TorukSC-Light" family="TorukSC" pointSize="30"/>
                                         <state key="normal" title="Disclaimer" backgroundImage="Button_Purple"/>
                                         <connections>
-                                            <segue destination="rxD-4F-hET" kind="presentation" modalTransitionStyle="crossDissolve" id="MSf-Ix-heD"/>
+                                            <segue destination="rxD-4F-hET" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="MSf-Ix-heD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11b-UM-94g" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="195.00000000000003" width="334" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" label="Disclaimer"/>
+                                        <fontDescription key="fontDescription" name="TorukSC-Light" family="TorukSC" pointSize="30"/>
+                                        <state key="normal" title="Privacy Policy" backgroundImage="Button_Purple"/>
+                                        <connections>
+                                            <action selector="openLearnNaviPrivacyPolicy:" destination="aLy-wL-qzA" eventType="touchUpInside" id="83b-r6-DMs"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -533,21 +542,21 @@
             <objects>
                 <viewController id="rxD-4F-hET" customClass="LNViewController" customModule="LearnNavi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qTR-Ln-vkz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleToFill" image="Background-Resources" translatesAutoresizingMaskIntoConstraints="NO" id="Hzw-ER-YCg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJV-3j-0vO">
-                                <rect key="frame" x="40" y="110" width="334" height="496"/>
+                                <rect key="frame" x="40" y="110" width="334" height="516"/>
                                 <string key="text">The Na'vi language was created by Paul Frommer. Much of the information displayed in this App was written by Prof. Frommer and is presented here for educational purposes only. Learn Na'vi is not affiliated with the official Avatar website, James Cameron, or the Twentieth Century-Fox Film Corporation. All trademarks and servicemarks are the properties of their respective owners.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Toruk-Light" family="Toruk" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cq1-Z1-JD6" customClass="LNButton" customModule="LearnNavi" customModuleProvider="target">
-                                <rect key="frame" x="40" y="616" width="334" height="50"/>
+                                <rect key="frame" x="40" y="636" width="334" height="50"/>
                                 <accessibility key="accessibilityConfiguration" label="Back"/>
                                 <fontDescription key="fontDescription" name="TorukSC-Light" family="TorukSC" pointSize="30"/>
                                 <state key="normal" title="Back" backgroundImage="Button_Gray"/>
